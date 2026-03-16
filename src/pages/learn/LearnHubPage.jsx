@@ -16,7 +16,7 @@ function LearnHubPage() {
     title: 'Learn — The Open Vector',
     description: 'The Open Vector learning platform. Curriculum, resources, and everything you need to build with intention.',
     path: '/learn',
-    ogImage: 'https://zerovector.design/og/learn.png',
+    ogImage: 'https://open.zerovector.design/og/learn.png',
   });
 
   const totalLessons = learn.levels.reduce((sum, l) => sum + l.lessons.length, 0);
