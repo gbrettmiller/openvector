@@ -4247,8 +4247,18 @@ a:hover {
 .ovl-chat {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 56px);
+  flex: 1;
+  min-height: 0;
   margin: -32px -48px -80px;
+  overflow: hidden;
+}
+
+/* When chat page is active, make the content area a flex column
+   so the chat can fill remaining space after banner/breadcrumbs */
+.ovl-content:has(.ovl-chat) {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 56px);
   overflow: hidden;
 }
 
