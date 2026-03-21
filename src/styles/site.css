@@ -6152,6 +6152,10 @@ a:hover {
 }
 
 /* --- Email in sidebar (narrow, stacked) --- */
+.ovl-sidebar-email {
+  padding: 0 16px;
+}
+
 .ovl-sidebar-email .zv-notify-form {
   flex-direction: column;
 }
