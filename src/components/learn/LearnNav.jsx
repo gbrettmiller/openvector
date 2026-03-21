@@ -72,6 +72,7 @@ function LearnNav({ sidebarOpen, onToggle }) {
   const { pathname } = useLocation();
   const isApproach = pathname.includes('/approach') && pathname.includes('/learn');
   const isCurriculum = pathname.includes('/curriculum');
+  const isWorkflows = pathname.includes('/workflows');
   const isChat = pathname.includes('/chat');
   const isMoreActive = pathname.includes('/resources') || pathname.includes('/contribute') || pathname.includes('/about');
 
@@ -109,6 +110,12 @@ function LearnNav({ sidebarOpen, onToggle }) {
             className={`ovl-nav-tab ${isApproach ? 'ovl-nav-tab--active' : ''}`}
           >
             Approach
+          </Link>
+          <Link
+            to="/learn/workflows"
+            className={`ovl-nav-tab ${isWorkflows ? 'ovl-nav-tab--active' : ''}`}
+          >
+            Workflows
           </Link>
           <Link
             to="/learn/chat"

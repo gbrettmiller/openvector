@@ -4681,6 +4681,161 @@ a:hover {
   }
 }
 
+/* --- Workflows (Coming Soon) --- */
+
+.ovl-workflows {
+  max-width: 760px;
+}
+
+.ovl-workflows-header {
+  margin-bottom: 40px;
+}
+
+.ovl-workflows-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ovl-accent);
+  border: 1px solid var(--ovl-accent);
+  border-radius: 3px;
+  padding: 3px 10px;
+  margin-bottom: 12px;
+}
+
+.ovl-workflows-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: var(--ovl-text);
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.ovl-workflows-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ovl-text-secondary);
+  margin: 0;
+  max-width: 600px;
+}
+
+.ovl-workflows-intro {
+  margin-bottom: 48px;
+}
+
+.ovl-workflows-intro-body p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ovl-text);
+  margin: 0 0 16px;
+}
+
+.ovl-workflows-section-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ovl-text);
+  margin: 0 0 20px;
+}
+
+.ovl-workflows-features {
+  margin-bottom: 48px;
+}
+
+.ovl-workflows-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.ovl-workflows-feature {
+  padding: 20px;
+  border: 1px solid var(--ovl-border);
+  border-radius: 8px;
+  background: var(--ovl-bg-elevated);
+}
+
+.ovl-workflows-feature-icon {
+  font-size: 20px;
+  color: var(--ovl-accent);
+  margin-bottom: 8px;
+}
+
+.ovl-workflows-feature h3 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ovl-text);
+  margin: 0 0 6px;
+}
+
+.ovl-workflows-feature p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ovl-text-secondary);
+  margin: 0;
+}
+
+.ovl-workflows-notify {
+  margin-bottom: 48px;
+}
+
+.ovl-workflows-notify-card {
+  padding: 32px;
+  border: 1px solid var(--ovl-accent);
+  border-radius: 8px;
+  background: var(--ovl-accent-subtle);
+}
+
+.ovl-workflows-notify-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ovl-text);
+  margin: 0 0 8px;
+}
+
+.ovl-workflows-notify-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ovl-text-secondary);
+  margin: 0 0 20px;
+}
+
+.ovl-workflows-notify-form {
+  max-width: 420px;
+}
+
+.ovl-workflows-contribute {
+  margin-bottom: 48px;
+}
+
+.ovl-workflows-contribute p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ovl-text);
+  margin: 0 0 20px;
+}
+
+.ovl-workflows-contribute-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .ovl-workflows-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ovl-workflows-notify-card {
+    padding: 24px;
+  }
+}
+
 /* --- Not Found --- */
 
 .ovl-not-found {
