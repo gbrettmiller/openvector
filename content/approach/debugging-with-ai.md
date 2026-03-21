@@ -69,9 +69,7 @@ The most effective bug description format is two sentences: what you expected to
 3. [This is where it breaks]
 
 **Error message:**
-```
 [Paste the full error message and stack trace here]
-```
 
 **What changed recently:**
 [The last thing Claude modified, or the last commit message]

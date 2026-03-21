@@ -36,15 +36,15 @@ function ExerciseBlock({ children, title }) {
   );
 }
 
-/** Custom component: Template block */
-function TemplateBlock({ children, title }) {
+/** Custom component: Template block — renders content as raw preformatted text */
+function TemplateBlock({ rawcontent, title }) {
   return (
     <div className="ovl-block ovl-block-template">
       <div className="ovl-template-header">
         <span className="ovl-template-label">Template</span>
         {title && <span className="ovl-template-title">{title}</span>}
       </div>
-      <div className="ovl-template-body">{children}</div>
+      <pre className="ovl-template-body"><code>{rawcontent}</code></pre>
     </div>
   );
 }
