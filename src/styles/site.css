@@ -1178,6 +1178,23 @@ a:hover {
   --ovl-border-strong: rgba(0, 0, 0, 0.15);
   --ovl-success: #00aa44;
   --ovl-nav-bg: rgba(255, 255, 255, 0.92);
+
+  /* Vibrant color system */
+  --color-mint: #00ddc0;
+  --color-blue: #0055ff;
+  --color-green: #00e68a;
+  --color-orange: #ff6b2b;
+  --color-purple: #a855f7;
+  --color-red: #ff3355;
+  --color-yellow: #ffd000;
+
+  /* Level accent colors */
+  --level-00: var(--color-mint);
+  --level-01: var(--color-blue);
+  --level-02: var(--color-green);
+  --level-03: var(--color-orange);
+  --level-04: var(--color-purple);
+  --level-05: var(--color-red);
 }
 
 .ovl-page {
@@ -1452,6 +1469,14 @@ a:hover {
   color: var(--ovl-accent);
   font-weight: 500;
   flex-shrink: 0;
+}
+/* Per-level colors in sidebar */
+[data-level="00"] .ovl-sidebar-level-number { color: var(--level-00); }
+[data-level="01"] .ovl-sidebar-level-number { color: var(--level-01); }
+[data-level="02"] .ovl-sidebar-level-number { color: var(--level-02); }
+[data-level="03"] .ovl-sidebar-level-number { color: var(--level-03); }
+[data-level="04"] .ovl-sidebar-level-number { color: var(--level-04); }
+[data-level="05"] .ovl-sidebar-level-number { color: var(--level-05); }
 }
 
 .ovl-sidebar-level-title {
@@ -1735,19 +1760,29 @@ a:hover {
   gap: 24px;
   padding: 28px 24px;
   border: 1px solid var(--ovl-border);
+  border-left: 3px solid var(--level-color, var(--ovl-border));
   color: var(--ovl-text) !important;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 .ovl-level-card:hover {
   background: var(--ovl-accent-subtle);
   border-color: var(--ovl-accent-medium);
+  border-left-color: var(--level-color, var(--ovl-accent));
 }
+
+/* Per-level accent colors */
+.ovl-level-card[data-level="00"] { --level-color: var(--level-00); }
+.ovl-level-card[data-level="01"] { --level-color: var(--level-01); }
+.ovl-level-card[data-level="02"] { --level-color: var(--level-02); }
+.ovl-level-card[data-level="03"] { --level-color: var(--level-03); }
+.ovl-level-card[data-level="04"] { --level-color: var(--level-04); }
+.ovl-level-card[data-level="05"] { --level-color: var(--level-05); }
 
 .ovl-level-card-number {
   font-family: var(--font-mono);
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 700;
-  color: var(--ovl-border);
+  color: var(--level-color, var(--ovl-border));
   line-height: 1;
   flex-shrink: 0;
   width: 64px;
@@ -1797,6 +1832,14 @@ a:hover {
   color: var(--ovl-border);
   line-height: 1;
   margin-bottom: 8px;
+}
+/* Level page header number colors */
+[data-level="00"] .ovl-level-header-number { color: var(--level-00); }
+[data-level="01"] .ovl-level-header-number { color: var(--level-01); }
+[data-level="02"] .ovl-level-header-number { color: var(--level-02); }
+[data-level="03"] .ovl-level-header-number { color: var(--level-03); }
+[data-level="04"] .ovl-level-header-number { color: var(--level-04); }
+[data-level="05"] .ovl-level-header-number { color: var(--level-05); }
 }
 
 .ovl-level-header-title {
@@ -1972,8 +2015,9 @@ a:hover {
 .ovl-block-exercise {
   margin: 36px 0;
   padding: 24px;
-  border: 1px solid rgba(0, 170, 68, 0.3);
-  background: rgba(0, 170, 68, 0.04);
+  border: 1px solid rgba(0, 230, 138, 0.3);
+  border-left: 3px solid var(--color-green);
+  background: rgba(0, 230, 138, 0.04);
   border-radius: 4px;
 }
 
@@ -1981,7 +2025,7 @@ a:hover {
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 600;
-  color: var(--ovl-success);
+  color: var(--color-green);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -2348,13 +2392,13 @@ a:hover {
 }
 
 .ovl-badge--new {
-  background: var(--ovl-accent);
+  background: var(--color-red);
   color: #fff;
 }
 
 .ovl-badge--updated {
-  background: var(--ovl-accent-medium);
-  color: var(--ovl-accent);
+  background: rgba(255, 107, 43, 0.12);
+  color: var(--color-orange);
 }
 
 /* --- Progress: Mark Complete --- */
@@ -3616,11 +3660,11 @@ a:hover {
   letter-spacing: 0.08em;
   padding: 2px 8px;
 }
-.ovl-resource-type--book { background: var(--ovl-accent-medium); color: var(--ovl-accent); }
-.ovl-resource-type--article { background: rgba(0, 180, 100, 0.1); color: #00a060; }
-.ovl-resource-type--course { background: rgba(180, 80, 255, 0.1); color: #9040e0; }
-.ovl-resource-type--tool { background: rgba(255, 140, 0, 0.1); color: #cc7000; }
-.ovl-resource-type--reference { background: var(--ovl-border); color: var(--ovl-text-secondary); }
+.ovl-resource-type--book { background: rgba(0, 85, 255, 0.10); color: var(--color-blue); }
+.ovl-resource-type--article { background: rgba(0, 230, 138, 0.10); color: #00b868; }
+.ovl-resource-type--course { background: rgba(168, 85, 247, 0.10); color: var(--color-purple); }
+.ovl-resource-type--tool { background: rgba(255, 107, 43, 0.10); color: var(--color-orange); }
+.ovl-resource-type--reference { background: rgba(0, 221, 192, 0.10); color: #00b89e; }
 
 .ovl-resource-card-arrow {
   font-size: 14px;
@@ -4179,8 +4223,8 @@ a:hover {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--ovl-accent);
-  color: white;
+  background: var(--color-mint);
+  color: #0a0a0a;
   font-family: var(--font-mono);
   font-size: 14px;
   font-weight: 700;
@@ -4203,8 +4247,8 @@ a:hover {
 
 /* Template blocks */
 .ovl-block-template {
-  background: var(--ovl-accent-subtle);
-  border: 1px solid var(--ovl-accent-medium);
+  background: rgba(255, 107, 43, 0.04);
+  border: 1px solid rgba(255, 107, 43, 0.15);
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 16px;
@@ -4222,8 +4266,8 @@ a:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--ovl-accent);
-  background: var(--ovl-accent-medium);
+  color: var(--color-orange);
+  background: rgba(255, 107, 43, 0.10);
   padding: 2px 8px;
   border-radius: 3px;
 }
@@ -4698,8 +4742,8 @@ a:hover {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--ovl-accent);
-  border: 1px solid var(--ovl-accent);
+  color: var(--color-orange);
+  border: 1px solid var(--color-orange);
   border-radius: 3px;
   padding: 2px 8px;
   margin-bottom: 8px;
@@ -4757,8 +4801,8 @@ a:hover {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--ovl-accent);
-  border: 1px solid var(--ovl-accent);
+  color: var(--color-orange);
+  border: 1px solid var(--color-orange);
   border-radius: 3px;
   padding: 3px 10px;
   margin-bottom: 12px;

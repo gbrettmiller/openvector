@@ -263,6 +263,7 @@ function LearnSidebar({ levels, activeLevelSlug, activeLessonSlug, approach, act
                   <div
                     key={level.slug}
                     className={`ovl-sidebar-level ${isActiveLevel ? 'ovl-sidebar-level--active' : ''}`}
+                    data-level={level.number}
                   >
                     <Link
                       to={`/learn/curriculum/${level.slug}`}

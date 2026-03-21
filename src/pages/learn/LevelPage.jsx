@@ -43,7 +43,7 @@ function LevelPage() {
   const nextLevel = levelIndex < learn.levels.length - 1 ? learn.levels[levelIndex + 1] : null;
 
   return (
-    <div className="ovl-level-page">
+    <div className="ovl-level-page" data-level={level.number}>
       <header className="ovl-level-header">
         <div className="ovl-level-header-number">{level.number}</div>
         <h1 className="ovl-level-header-title">{level.title}</h1>

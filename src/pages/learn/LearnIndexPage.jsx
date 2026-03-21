@@ -45,6 +45,7 @@ function LearnIndexPage() {
                   key={level.slug}
                   to={`/learn/curriculum/${level.slug}`}
                   className="ovl-level-card"
+                  data-level={level.number}
                 >
                   <div className="ovl-level-card-number">
                     {level.number}
