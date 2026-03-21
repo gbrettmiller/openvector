@@ -3507,8 +3507,24 @@ a:hover {
 .ovl-resources-filters {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
   margin-bottom: 20px;
+}
+
+.ovl-resources-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ovl-resources-filter-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ovl-text-secondary, rgba(0, 0, 0, 0.45));
+  padding-left: 2px;
 }
 
 .ovl-resources-filter-row {
@@ -3550,6 +3566,8 @@ a:hover {
   padding: 4px 10px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  border-radius: 20px;
+  border-style: dashed;
 }
 
 .ovl-filter-pill-count {

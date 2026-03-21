@@ -67,33 +67,39 @@ function LearnResourcesPage() {
       <div className="ovl-with-rail">
         <div className="ovl-main">
           <div className="ovl-resources-filters">
-            <div className="ovl-resources-filter-row">
-              {resourceTypes.map(t => (
-                <button
-                  key={t.key}
-                  className={`ovl-filter-pill ${activeType === t.key ? 'ovl-filter-pill--active' : ''}`}
-                  onClick={() => setActiveType(t.key)}
-                >
-                  {t.label}
-                  {t.key !== 'all' && typeCounts[t.key] && (
-                    <span className="ovl-filter-pill-count">{typeCounts[t.key]}</span>
-                  )}
-                </button>
-              ))}
+            <div className="ovl-resources-filter-group">
+              <span className="ovl-resources-filter-label">Type</span>
+              <div className="ovl-resources-filter-row">
+                {resourceTypes.map(t => (
+                  <button
+                    key={t.key}
+                    className={`ovl-filter-pill ${activeType === t.key ? 'ovl-filter-pill--active' : ''}`}
+                    onClick={() => setActiveType(t.key)}
+                  >
+                    {t.label}
+                    {t.key !== 'all' && typeCounts[t.key] && (
+                      <span className="ovl-filter-pill-count">{typeCounts[t.key]}</span>
+                    )}
+                  </button>
+                ))}
+              </div>
             </div>
-            <div className="ovl-resources-filter-row">
-              {topicFilters.map(t => (
-                <button
-                  key={t.key}
-                  className={`ovl-filter-pill ovl-filter-pill--topic ${activeTopic === t.key ? 'ovl-filter-pill--active' : ''}`}
-                  onClick={() => handleTopicChange(t.key)}
-                >
-                  {t.label}
-                  {t.key !== 'all' && topicCounts[t.key] && (
-                    <span className="ovl-filter-pill-count">{topicCounts[t.key]}</span>
-                  )}
-                </button>
-              ))}
+            <div className="ovl-resources-filter-group">
+              <span className="ovl-resources-filter-label">Topic</span>
+              <div className="ovl-resources-filter-row">
+                {topicFilters.map(t => (
+                  <button
+                    key={t.key}
+                    className={`ovl-filter-pill ovl-filter-pill--topic ${activeTopic === t.key ? 'ovl-filter-pill--active' : ''}`}
+                    onClick={() => handleTopicChange(t.key)}
+                  >
+                    {t.label}
+                    {t.key !== 'all' && topicCounts[t.key] && (
+                      <span className="ovl-filter-pill-count">{topicCounts[t.key]}</span>
+                    )}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
