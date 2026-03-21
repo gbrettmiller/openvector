@@ -75,7 +75,13 @@ function LearnHubPage() {
         <div className="ovl-hub-hero-content">
           {isLoggedIn ? (
             <>
-              <div className="ovl-hub-hero-greeting">Welcome back, {user.name.split(' ')[0]}</div>
+              <div className="ovl-hub-hero-greeting">{(() => {
+                const h = new Date().getHours();
+                const name = user.name.split(' ')[0];
+                if (h < 12) return `Good morning, ${name}`;
+                if (h < 17) return `Good afternoon, ${name}`;
+                return `Good evening, ${name}`;
+              })()}</div>
               <h1 className="ovl-hub-hero-title">The Open Vector</h1>
             </>
           ) : (

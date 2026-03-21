@@ -485,8 +485,22 @@ a:hover {
 
 @media (prefers-reduced-motion: reduce) {
   .ov-launch-banner::after,
-  .ov-launch-beacon {
+  .ov-launch-beacon,
+  .ovl-mark-complete-btn--done,
+  .ovl-sidebar-check {
     animation: none;
+  }
+  .ov-btn:hover,
+  .ov-btn:active,
+  .ov-btn-primary:hover,
+  .ov-btn-primary:active,
+  .ovl-btn-primary:hover,
+  .ovl-btn-primary:active,
+  .ovl-level-card:hover,
+  .ovl-hub-card:hover,
+  .ovl-mark-complete-btn:hover,
+  .ovl-mark-complete-btn:active {
+    transform: none;
   }
   .ov-launch-beacon {
     opacity: 1;
@@ -1092,6 +1106,7 @@ a:hover {
   padding: 14px 28px;
   border: none;
   border-radius: 0;
+  transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1), background 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
   cursor: pointer;
   transition: all 0.3s var(--ease-out);
   text-decoration: none;
@@ -1105,6 +1120,13 @@ a:hover {
 .ov-btn-primary:hover {
   background: #0044cc;
   color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 85, 255, 0.25);
+}
+
+.ov-btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: none;
 }
 
 .ov-btn-outline {
@@ -1117,6 +1139,11 @@ a:hover {
   border-color: #0a0a0a;
   color: #0a0a0a;
   text-shadow: none;
+  transform: translateY(-1px);
+}
+
+.ov-btn-outline:active {
+  transform: translateY(1px);
 }
 
 /* --- Open Vector Responsive --- */
@@ -1269,7 +1296,7 @@ a:hover {
   border-radius: 6px;
   text-decoration: none;
   display: inline-block;
-  transition: background 0.2s, border-color 0.2s;
+  transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1), background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   cursor: pointer;
 }
 .ovl-btn-primary {
@@ -1279,6 +1306,12 @@ a:hover {
 .ovl-btn-primary:hover {
   color: #fff;
   background: var(--ovl-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 85, 255, 0.2);
+}
+.ovl-btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: none;
 }
 .ovl-btn-outline {
   color: var(--ovl-accent);
@@ -1353,16 +1386,34 @@ a:hover {
   font-size: 12px;
   font-weight: 600;
   color: var(--ovl-text-tertiary) !important;
+  position: relative;
   letter-spacing: 0.02em;
   border-bottom: 2px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
+.ovl-nav-tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background: var(--ovl-accent);
+  transition: left 0.25s cubic-bezier(0.22, 1, 0.36, 1), right 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
 .ovl-nav-tab:hover {
   color: var(--ovl-text) !important;
 }
+.ovl-nav-tab:hover::after {
+  left: 16px;
+  right: 16px;
+}
 .ovl-nav-tab--active {
   color: var(--ovl-accent) !important;
-  border-bottom-color: var(--ovl-accent);
+}
+.ovl-nav-tab--active::after {
+  left: 16px;
+  right: 16px;
 }
 
 .ovl-nav-right {
@@ -1803,12 +1854,14 @@ a:hover {
   border: 1px solid var(--ovl-border);
   border-left: 3px solid var(--level-color, var(--ovl-border));
   color: var(--ovl-text) !important;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.2s ease;
 }
 .ovl-level-card:hover {
   background: var(--ovl-accent-subtle);
   border-color: var(--ovl-accent-medium);
   border-left-color: var(--level-color, var(--ovl-accent));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 /* Per-level accent colors */
@@ -2460,7 +2513,15 @@ a:hover {
   border-radius: 6px;
   background: transparent;
   cursor: pointer;
-  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease, transform 0.15s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.2s ease;
+}
+
+.ovl-mark-complete-btn:hover {
+  transform: translateY(-1px);
+}
+
+.ovl-mark-complete-btn:active {
+  transform: translateY(1px);
 }
 
 .ovl-mark-complete-check {
@@ -2484,8 +2545,20 @@ a:hover {
 }
 
 .ovl-mark-complete-btn--done {
-  background: var(--ovl-accent);
-  border-color: var(--ovl-accent);
+  background: var(--color-green);
+  border-color: var(--color-green);
+  animation: ovl-complete-celebrate 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes ovl-complete-celebrate {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.ovl-mark-complete-btn--done:hover {
+  background: #00cc77;
+  border-color: #00cc77;
 }
 
 .ovl-mark-complete-btn--done .ovl-mark-complete-check {
@@ -2496,10 +2569,7 @@ a:hover {
   color: #fff;
 }
 
-.ovl-mark-complete-btn--done:hover {
-  background: var(--ovl-accent-hover);
-  border-color: var(--ovl-accent-hover);
-}
+/* hover already defined above with green */
 
 /* --- Progress: Ring (level cards) --- */
 
@@ -2575,10 +2645,18 @@ a:hover {
 .ovl-sidebar-check {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--ovl-accent);
+  color: var(--color-green);
   width: 14px;
   flex-shrink: 0;
   text-align: center;
+  animation: ovl-check-appear 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes ovl-check-appear {
+  0% { opacity: 0; transform: scale(0.5); }
+  60% { transform: scale(1.2); }
+  100% { opacity: 1; transform: scale(1); }
+}
 }
 
 .ovl-sidebar-lesson-label {
@@ -3401,11 +3479,13 @@ a:hover {
   padding: 32px 28px;
   border: 1px solid var(--ovl-border);
   color: var(--ovl-text) !important;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.2s ease;
 }
 .ovl-hub-card:hover {
   background: var(--ovl-accent-subtle);
   border-color: var(--ovl-accent-medium);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .ovl-hub-card-icon {
