@@ -10,6 +10,7 @@ function LearnSidebar({ levels, activeLevelSlug, activeLessonSlug, approach, act
   const { isComplete, enabled } = useProgress();
   const { pathname } = useLocation();
   const isApproach = pathname.includes('/approach') && pathname.includes('/learn');
+  const isWorkflows = pathname.includes('/workflows');
   const isResources = pathname.includes('/resources');
   const isChat = pathname.includes('/chat');
   const isContribute = pathname.includes('/contribute');
@@ -128,6 +129,45 @@ function LearnSidebar({ levels, activeLevelSlug, activeLessonSlug, approach, act
                   </div>
                 );
               })}
+            </div>
+          ) : isWorkflows ? (
+            <div className="ovl-sidebar-workflows">
+              <div className="ovl-sidebar-section-label">Workflows</div>
+              <div className="ovl-sidebar-workflows-coming">
+                <div className="ovl-sidebar-workflows-badge">Coming Soon</div>
+                <p className="ovl-sidebar-workflows-text">
+                  Structured, self-paced courses are in development. Each workflow will appear here as a guided path you can follow from start to finish.
+                </p>
+              </div>
+              <div className="ovl-sidebar-section-label" style={{ marginTop: '20px' }}>Planned</div>
+              <div className="ovl-sidebar-workflows-list">
+                <div className="ovl-sidebar-workflows-item ovl-sidebar-workflows-item--coming">
+                  <span className="ovl-sidebar-workflows-dot" />
+                  <span>Your First Project</span>
+                </div>
+                <div className="ovl-sidebar-workflows-item ovl-sidebar-workflows-item--coming">
+                  <span className="ovl-sidebar-workflows-dot" />
+                  <span>Portfolio Site from Scratch</span>
+                </div>
+                <div className="ovl-sidebar-workflows-item ovl-sidebar-workflows-item--coming">
+                  <span className="ovl-sidebar-workflows-dot" />
+                  <span>Multi-Agent Project</span>
+                </div>
+              </div>
+              <div className="ovl-sidebar-section-label" style={{ marginTop: '20px' }}>Get Involved</div>
+              <Link to="/learn/contribute" className="ovl-sidebar-hub-link" onClick={onClose}>
+                <span className="ovl-sidebar-hub-glyph">&dagger;</span>
+                <span>Propose a Workflow</span>
+              </Link>
+              <a
+                href="https://github.com/erikaflowers/openvector/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ovl-sidebar-hub-link"
+              >
+                <span className="ovl-sidebar-hub-glyph">&para;</span>
+                <span>Open Issues</span>
+              </a>
             </div>
           ) : isResources ? (
             <div className="ovl-sidebar-resources">

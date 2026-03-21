@@ -4681,7 +4681,66 @@ a:hover {
   }
 }
 
-/* --- Workflows (Coming Soon) --- */
+/* --- Workflows Sidebar --- */
+
+.ovl-sidebar-workflows {
+  padding: 0 16px;
+}
+
+.ovl-sidebar-workflows-coming {
+  padding: 12px 0;
+}
+
+.ovl-sidebar-workflows-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ovl-accent);
+  border: 1px solid var(--ovl-accent);
+  border-radius: 3px;
+  padding: 2px 8px;
+  margin-bottom: 8px;
+}
+
+.ovl-sidebar-workflows-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ovl-text-secondary);
+  margin: 0;
+}
+
+.ovl-sidebar-workflows-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ovl-sidebar-workflows-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ovl-text-secondary);
+}
+
+.ovl-sidebar-workflows-item--coming {
+  opacity: 0.5;
+}
+
+.ovl-sidebar-workflows-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--ovl-text-secondary);
+  flex-shrink: 0;
+}
+
+/* --- Workflows Page (Coming Soon) --- */
 
 .ovl-workflows {
   max-width: 760px;
