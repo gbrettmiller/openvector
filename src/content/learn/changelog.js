@@ -3,6 +3,15 @@
 
 export default [
   {
+    date: '2026-03-20',
+    title: 'Content Fix: Claude Code Installation',
+    items: [
+      'Updated L02 Claude Code lesson to recommend the official installer (curl) instead of npm install -g, which fails on macOS without sudo',
+      'Added troubleshooting note for users who encounter npm permission errors',
+      'Thanks to community feedback for flagging this gap',
+    ],
+  },
+  {
     date: '2026-02-15',
     title: 'Contributions, Support & Platform Hardening',
     items: [

@@ -24,13 +24,24 @@ export default {
         heading: 'Installing Claude Code',
         body: [
           'Claude Code runs in your terminal. You need Node.js installed (which you will need for web development anyway) and an Anthropic account.',
-          'Install it globally with npm: npm install -g @anthropic-ai/claude-code. Once installed, navigate to any project folder in your terminal and type claude to start a session.',
-          'That is it. No IDE plugins. No complex setup. Just your terminal, your project folder, and a conversation.',
+          'The recommended way to install is with the official installer. Run the command below in your terminal. It handles permissions correctly and does not require sudo or admin access.',
         ],
       },
       {
         type: 'code',
-        body: '# Install Claude Code\nnpm install -g @anthropic-ai/claude-code\n\n# Navigate to your project\ncd ~/my-project\n\n# Start a session\nclaude\n\n# You are now in a conversation with an AI agent\n# that can read, write, and run code in your project.',
+        body: '# Install Claude Code (recommended)\ncurl -fsSL https://claude.ai/install.sh | bash\n\n# Open a new terminal window, then verify it worked\nclaude --version',
+      },
+      {
+        type: 'text',
+        heading: null,
+        body: [
+          'Once installed, navigate to any project folder in your terminal and type claude to start a session. That is it. No IDE plugins. No complex setup. Just your terminal, your project folder, and a conversation.',
+          'You may see older guides suggest npm install -g @anthropic-ai/claude-code. That still works, but on macOS it often fails with a permissions error because the global npm directory requires admin access. If you hit that, do not use sudo — use the installer above instead. It avoids the permissions issue entirely and will not cause problems later.',
+        ],
+      },
+      {
+        type: 'code',
+        body: '# Navigate to your project\ncd ~/my-project\n\n# Start a session\nclaude\n\n# You are now in a conversation with an AI agent\n# that can read, write, and run code in your project.',
       },
       {
         type: 'text',
