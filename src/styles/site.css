@@ -603,6 +603,13 @@ a:hover {
   font-weight: 700;
   color: #00aa44;
   flex-shrink: 0;
+}
+.ov-pledge-item:nth-child(1) .ov-pledge-icon { color: var(--color-blue); }
+.ov-pledge-item:nth-child(2) .ov-pledge-icon { color: var(--color-green); }
+.ov-pledge-item:nth-child(3) .ov-pledge-icon { color: var(--color-mint); }
+.ov-pledge-item:nth-child(4) .ov-pledge-icon { color: var(--color-orange); }
+.ov-pledge-item:nth-child(5) .ov-pledge-icon { color: var(--color-purple); }
+.ov-pledge-item:nth-child(6) .ov-pledge-icon { color: var(--color-red); }
   width: 32px;
   text-align: center;
   line-height: 1.6;
@@ -652,6 +659,14 @@ a:hover {
   font-weight: 600;
   color: #999;
   flex-shrink: 0;
+}
+/* Per-level colors on landing page curriculum overview */
+.ov-curriculum-overview-item:nth-child(1) .ov-curriculum-overview-num { color: var(--level-00); }
+.ov-curriculum-overview-item:nth-child(2) .ov-curriculum-overview-num { color: var(--level-01); }
+.ov-curriculum-overview-item:nth-child(3) .ov-curriculum-overview-num { color: var(--level-02); }
+.ov-curriculum-overview-item:nth-child(4) .ov-curriculum-overview-num { color: var(--level-03); }
+.ov-curriculum-overview-item:nth-child(5) .ov-curriculum-overview-num { color: var(--level-04); }
+.ov-curriculum-overview-item:nth-child(6) .ov-curriculum-overview-num { color: var(--level-05); }
   min-width: 24px;
 }
 
@@ -879,7 +894,7 @@ a:hover {
 }
 
 .ov-contrast-us .ov-contrast-col-label {
-  color: #00aa44;
+  color: var(--color-green);
 }
 
 .ov-contrast-line {
@@ -2796,7 +2811,7 @@ a:hover {
 
 .ovl-hub-progress-fill {
   height: 100%;
-  background: var(--ovl-accent);
+  background: var(--color-green);
   border-radius: 3px;
   transition: width 0.4s ease;
 }
@@ -2863,6 +2878,9 @@ a:hover {
   font-weight: 700;
   margin-bottom: 12px;
 }
+.ovl-hub-about-block:nth-child(1) .ovl-hub-about-icon { color: var(--color-blue); }
+.ovl-hub-about-block:nth-child(2) .ovl-hub-about-icon { color: var(--color-green); }
+.ovl-hub-about-block:nth-child(3) .ovl-hub-about-icon { color: var(--color-red); }
 
 .ovl-hub-about-label {
   font-family: var(--font-display);
@@ -3380,6 +3398,15 @@ a:hover {
   color: var(--ovl-accent);
   font-weight: 700;
 }
+/* Distinct colors per hub section card */
+.ovl-hub-sections .ovl-hub-card:nth-child(1) .ovl-hub-card-glyph { color: var(--color-blue); }
+.ovl-hub-sections .ovl-hub-card:nth-child(1) .ovl-hub-card-icon { background: rgba(0, 85, 255, 0.08); }
+.ovl-hub-sections .ovl-hub-card:nth-child(2) .ovl-hub-card-glyph { color: var(--color-mint); }
+.ovl-hub-sections .ovl-hub-card:nth-child(2) .ovl-hub-card-icon { background: rgba(0, 221, 192, 0.08); }
+.ovl-hub-sections .ovl-hub-card:nth-child(3) .ovl-hub-card-glyph { color: var(--color-orange); }
+.ovl-hub-sections .ovl-hub-card:nth-child(3) .ovl-hub-card-icon { background: rgba(255, 107, 43, 0.08); }
+.ovl-hub-sections .ovl-hub-card:nth-child(4) .ovl-hub-card-glyph { color: var(--color-purple); }
+.ovl-hub-sections .ovl-hub-card:nth-child(4) .ovl-hub-card-icon { background: rgba(168, 85, 247, 0.08); }
 
 .ovl-hub-card-body {
   flex: 1;
