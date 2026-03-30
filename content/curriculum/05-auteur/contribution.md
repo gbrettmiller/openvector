@@ -8,21 +8,21 @@ status: available
 
 ## The Commons
 
-Everything you have learned in this curriculum was built on the work of others. React is open source. Git is open source. The tutorials you followed, the documentation you read, the Stack Overflow answers that saved you — all given freely by people who decided to share what they knew.
+Everything you have learned in this curriculum was built on the work of others. React is open source. Git is open source. The tutorials you followed, the documentation you read, the Stack Overflow answers that saved you, all given freely by people who decided to share what they knew.
 
 This is the commons: the shared pool of knowledge, tools, and resources that everyone can use and contribute to. The commons is what makes it possible for one person with AI agents to build what used to require a team. Without the open-source ecosystem, the free learning resources, and the shared conventions, none of this would work.
 
 Contribution is the act of giving back to the commons. Not because you are obligated. Because the commons only works if people put things in, not just take things out.
 
-> You do not need to be an expert to contribute. You just need to have learned something that someone else has not learned yet. That gap — between what you know and what they know — is your contribution.
+> You do not need to be an expert to contribute. You just need to have learned something that someone else has not learned yet. That gap, between what you know and what they know, is your contribution.
 
 ## Types of Contribution
 
-Code. Open-source your projects, components, or tools. Even small things — a useful utility function, a project starter template, a well-configured CLAUDE.md. The size of the contribution matters less than the act of sharing it.
+Code. Open-source your projects, components, or tools. Even small things: a useful utility function, a project starter template, a well-configured CLAUDE.md. The size of the contribution matters less than the act of sharing it.
 
 Documentation. Improve the docs for a tool you use. Found a confusing section? Rewrite it. Found a missing example? Add one. Documentation contributions are often more valuable than code contributions because they lower the barrier to entry for everyone who follows.
 
-Bug reports. Found a bug? Report it clearly. A good bug report — with steps to reproduce, expected behavior, and actual behavior — saves the maintainer hours of detective work. This is a contribution even if you never write a line of code for the project.
+Bug reports. Found a bug? Report it clearly. A good bug report (with steps to reproduce, expected behavior, and actual behavior) saves the maintainer hours of detective work. This is a contribution even if you never write a line of code for the project.
 
 Answers. Answer a question on a forum, in a Discord channel, or on a GitHub issue. Someone is stuck on the same problem you solved last week. Your five-minute answer saves them five hours of frustration.
 
@@ -34,7 +34,7 @@ The biggest barrier to contribution is the belief that your contribution is not 
 
 Ignore this voice. Your contribution does not need to be groundbreaking. A typo fix in documentation is a contribution. A beginner-friendly explanation of a complex topic is a contribution. A project template that saves people thirty minutes of setup is a contribution.
 
-Start with what you already have. You have projects from this curriculum. Open-source them. You have notes from your learning. Publish them. You have configurations and templates. Share them. You have already done the work — contribution is often just the decision to make it public.
+Start with what you already have. You have projects from this curriculum. Open-source them. You have notes from your learning. Publish them. You have configurations and templates. Share them. You have already done the work. Contribution is often just the decision to make it public.
 
 ## Open-Sourcing Your Work
 
@@ -61,11 +61,11 @@ Contribute at a rhythm that fits your life. One blog post a month. One documenta
 Set boundaries early. If you open-source a project, decide upfront how much maintenance you are willing to do. A clear README that says "this is a personal project, no guarantees on issue response times" sets expectations and protects your energy.
 
 :::exercise{title="Make Your First Contribution"}
-Choose one: (1) Open-source a project from this curriculum. Push it to GitHub with a README and MIT license. (2) Find a documentation page for a tool you use that confused you. Submit a pull request improving it — even if the improvement is just a clearer example. (3) Find a question on a forum or community channel about something you know and write a thorough answer. Do one of these today. The first contribution is the hardest. Every one after it is easier.
+Choose one: (1) Open-source a project from this curriculum. Push it to GitHub with a README and MIT license. (2) Find a documentation page for a tool you use that confused you. Submit a pull request improving it, even if the improvement is just a clearer example. (3) Find a question on a forum or community channel about something you know and write a thorough answer. Do one of these today. The first contribution is the hardest. Every one after it is easier.
 :::
 
 :::resources{title="Go Deeper"}
-- [How to Contribute to Open Source (GitHub Guide)](https://opensource.guide/how-to-contribute/) — The definitive guide to making your first open-source contribution. Covers code, docs, and community.
-- [Working in Public by Nadia Asparouhova](https://press.stripe.com/working-in-public) — The economics and culture of open-source software. Understanding the ecosystem you are contributing to.
-- [The Cathedral and the Bazaar by Eric Raymond](http://www.catb.org/~esr/writings/cathedral-bazaar/) — The foundational essay on open-source development. Free online. Still relevant decades later.
+- [How to Contribute to Open Source (GitHub Guide)](https://opensource.guide/how-to-contribute/). The definitive guide to making your first open-source contribution. Covers code, docs, and community.
+- [Working in Public by Nadia Asparouhova](https://press.stripe.com/working-in-public). The economics and culture of open-source software. Understanding the ecosystem you are contributing to.
+- [The Cathedral and the Bazaar by Eric Raymond](http://www.catb.org/~esr/writings/cathedral-bazaar/). The foundational essay on open-source development. Free online. Still relevant decades later.
 :::

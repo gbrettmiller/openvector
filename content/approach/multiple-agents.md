@@ -15,13 +15,13 @@ prerequisites:
 
 ## What You Will Learn
 
-How to run multiple Claude Code instances as specialized agents — each with its own role, its own knowledge, and its own CLAUDE.md personality. This is the crew model: instead of one general-purpose assistant, you have a team of specialists who each own a domain.
+How to run multiple Claude Code instances as specialized agents, each with its own role, its own knowledge, and its own CLAUDE.md personality. This is the crew model: instead of one general-purpose assistant, you have a team of specialists who each own a domain.
 
-This is not a theoretical exercise. This is how Zero Vector itself was built — by a crew of agents, each with defined responsibilities, coordinated by one human operator. By the end of this guide, you will be able to set up and run your own crew.
+This is not a theoretical exercise. This is how Zero Vector itself was built, by a crew of agents, each with defined responsibilities, coordinated by one human operator. By the end of this guide, you will be able to set up and run your own crew.
 
 ## Why Multiple Agents
 
-A single Claude Code session has a context window. The more you ask it to hold in its head — frontend code, backend logic, deployment config, marketing copy, database schemas — the more diluted its attention becomes. It starts making mistakes. It forgets conventions. It conflates different parts of the system.
+A single Claude Code session has a context window. The more you ask it to hold in its head (frontend code, backend logic, deployment config, marketing copy, database schemas), the more diluted its attention becomes. It starts making mistakes. It forgets conventions. It conflates different parts of the system.
 
 Multiple agents solve this by specialization. Your frontend agent only thinks about components and styling. Your backend agent only thinks about APIs and data. Your content agent only thinks about copy and messaging. Each one is deeply focused on its domain, and you coordinate the handoffs.
 
@@ -30,7 +30,7 @@ This is exactly how real teams work. A designer does not also write the database
 > You are not managing AI. You are directing a team. The skills are the same ones that make a good design director or engineering lead: clear role definitions, explicit boundaries, and clean handoffs.
 
 :::step{number="01" title="Define Your Crew Roles"}
-Before opening a single terminal, decide what roles you need. Think about the domains of your project — the parts that are distinct enough to warrant separate focus.
+Before opening a single terminal, decide what roles you need. Think about the domains of your project, the parts that are distinct enough to warrant separate focus.
 
 For a typical web application, you might have: a Frontend agent (UI components, pages, styling, routing), a Backend agent (API endpoints, database, authentication), and a Content agent (copy, marketing pages, documentation). For a simpler project, you might just have two: a Builder agent and a Polish agent.
 
@@ -38,7 +38,7 @@ Start small. Two agents is enough to learn the pattern. You can add more as you 
 :::
 
 :::step{number="02" title="Create a CLAUDE.md for Each Agent"}
-Each agent gets its own CLAUDE.md file that defines its role, its domain, and its constraints. These files live in separate directories — one per agent — or in a shared repo where each agent's CLAUDE.md is loaded from a specific path.
+Each agent gets its own CLAUDE.md file that defines its role, its domain, and its constraints. These files live in separate directories (one per agent) or in a shared repo where each agent's CLAUDE.md is loaded from a specific path.
 
 The simplest setup: create a folder for each agent's worktree, each with its own CLAUDE.md. Or use Claude Code's project-level CLAUDE.md structure where different instances read different config files.
 
@@ -46,24 +46,24 @@ The key sections in an agent CLAUDE.md are: Role (who you are), Domain (what you
 :::
 
 :::template{title="Agent CLAUDE.md Template"}
-# [Agent Name] — [Role Title]
+# [Agent Name]: [Role Title]
 
 ## Role
 You are [name], the [role] for [project name]. You own [specific domain].
 
 ## Domain
 Your files and responsibilities:
-- src/components/ — All UI components
-- src/pages/ — Page-level components
-- src/styles/ — CSS and design tokens
-- public/ — Static assets
+- src/components/: All UI components
+- src/pages/: Page-level components
+- src/styles/: CSS and design tokens
+- public/: Static assets
 
 ## Conventions
 - Component naming: PascalCase (e.g., ProjectCard.jsx)
 - CSS class prefix: zv-
 - Max component size: 150 lines
 - Use semantic HTML elements
-- All colors from variables.css — never hardcode hex values
+- All colors from variables.css; never hardcode hex values
 
 ## Boundaries
 - Do NOT modify files in api/ or server/
@@ -78,13 +78,13 @@ When you need something from another agent:
 - Design tokens: check variables.css first, request new ones if needed
 
 ## Current Sprint
-[What you are working on right now — updated each session]
+[What you are working on right now, updated each session]
 :::
 
 :::step{number="03" title="Set Up Your Terminal Layout"}
 You need one terminal window per agent. Use your terminal's split pane or tab feature. On macOS Terminal, use Command+D to split. On iTerm2, use Command+Shift+D. On VS Code, you can open multiple integrated terminals.
 
-Label each pane or tab with the agent name — "Frontend", "Backend", "Content" — so you always know which agent you are talking to. This sounds small but it prevents the most common coordination mistake: giving a frontend instruction to the backend agent.
+Label each pane or tab with the agent name ("Frontend", "Backend", "Content") so you always know which agent you are talking to. This sounds small but it prevents the most common coordination mistake: giving a frontend instruction to the backend agent.
 :::
 
 :::step{number="04" title="Start Each Agent in Its Context"}
@@ -116,7 +116,7 @@ This sounds like overhead, but it is actually faster than letting agents coordin
 :::
 
 :::step{number="06" title="Define Interface Contracts"}
-Before agents start building, define the interfaces between their domains. For a web app, this usually means the API contract — what endpoints exist, what data they accept, and what they return.
+Before agents start building, define the interfaces between their domains. For a web app, this usually means the API contract: what endpoints exist, what data they accept, and what they return.
 
 Write these contracts in a shared document that both agents can reference:
 :::
@@ -190,8 +190,8 @@ Set up a two-agent crew for your project. Define a Frontend agent and a Backend 
 :::
 
 :::resources{title="Go Deeper"}
-- [Multi-Agent Orchestration (Curriculum)](/learn/curriculum/04-orchestration/multi-agent) — The conceptual foundation for running multiple AI agents.
-- [The Crew Model (Curriculum)](/learn/curriculum/04-orchestration/the-crew-model) — How the Zero Vector crew is structured — roles, boundaries, and coordination.
-- [CLAUDE.md (Curriculum)](/learn/curriculum/04-orchestration/claude-md) — Writing effective context files that give each agent its identity.
-- [Quality Gates (Curriculum)](/learn/curriculum/04-orchestration/quality-gates) — How to verify each agent's output before integration.
+- [Multi-Agent Orchestration (Curriculum)](/learn/curriculum/04-orchestration/multi-agent): The conceptual foundation for running multiple AI agents.
+- [The Crew Model (Curriculum)](/learn/curriculum/04-orchestration/the-crew-model): How the Zero Vector crew is structured, including roles, boundaries, and coordination.
+- [CLAUDE.md (Curriculum)](/learn/curriculum/04-orchestration/claude-md): Writing effective context files that give each agent its identity.
+- [Quality Gates (Curriculum)](/learn/curriculum/04-orchestration/quality-gates): How to verify each agent's output before integration.
 :::

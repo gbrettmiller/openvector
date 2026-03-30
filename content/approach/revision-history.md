@@ -14,14 +14,14 @@ prerequisites:
 
 ## What You Will Learn
 
-How to use git as a safety net when AI is writing code. When to commit, how to review AI-generated changes, how to branch for experiments, and how to revert when something goes wrong. This is not a git tutorial — it is a workflow guide for the specific challenges of AI-assisted development.
+How to use git as a safety net when AI is writing code. When to commit, how to review AI-generated changes, how to branch for experiments, and how to revert when something goes wrong. This is not a git tutorial. It is a workflow guide for the specific challenges of AI-assisted development.
 
 AI agents write code fast. That is both the power and the danger. Without disciplined version control, you can find yourself three hundred lines deep in changes you do not understand, with no way back to the version that worked.
 
 > The checkpoint commit is the most important habit in AI-assisted development. Before you tell Claude Code to make a change, commit what you have. If the change goes wrong, you can always get back to the last checkpoint.
 
 :::step{number="01" title="The Checkpoint Commit Pattern"}
-Before every significant Claude Code instruction, make a commit. Not after — before. This gives you a known-good state to return to if the AI produces something you do not want.
+Before every significant Claude Code instruction, make a commit. Not after, before. This gives you a known-good state to return to if the AI produces something you do not want.
 
 The workflow is: commit what works, then ask Claude to change something, then review the changes, then commit again if they are good. If they are not good, revert to the checkpoint.
 :::
@@ -56,7 +56,7 @@ git diff src/components/ContactForm.jsx
 
 You do not need to understand every line of code. But you should understand the shape of the changes. Did Claude only touch the files you expected? Did it add files you did not ask for? Did it modify something in a completely different part of the project? These are red flags.
 
-Look for: unexpected file modifications (especially package.json, config files, or unrelated components), large amounts of deleted code, new dependencies you did not request, and hardcoded values where variables should be.
+Look for unexpected file modifications (especially package.json, config files, or unrelated components), large amounts of deleted code, new dependencies you did not request, and hardcoded values where variables should be.
 
 :::step{number="03" title="Write Meaningful Commit Messages"}
 When AI is writing the code, your commit messages become even more important. They are the narrative thread that explains why changes were made, since the code itself might not be in your personal style.
@@ -77,7 +77,7 @@ wip: blog list renders, individual posts not yet linked
 :::
 
 :::step{number="04" title="Branch for Experiments"}
-When you want Claude Code to try something risky — a major refactor, a new approach to a component, or a feature you are not sure about — create a branch first. This is your experimental sandbox.
+When you want Claude Code to try something risky (a major refactor, a new approach to a component, or a feature you are not sure about), create a branch first. This is your experimental sandbox.
 :::
 
 ```
@@ -116,7 +116,7 @@ git log --oneline   # find the commit hash you want to go back to
 git reset --hard abc1234   # replace abc1234 with the actual hash
 ```
 
-> Level 3 destroys everything after that commit. Only use it when you are sure. This is why checkpoint commits matter — they give you a recent, safe point to reset to instead of going all the way back to the beginning.
+> Level 3 destroys everything after that commit. Only use it when you are sure. This is why checkpoint commits matter. They give you a recent, safe point to reset to instead of going all the way back to the beginning.
 
 :::step{number="06" title="Use Git Log to Understand Your History"}
 Your git log tells the story of your project. When you need to understand when something broke or what changed last Tuesday, the log is your timeline.
@@ -204,8 +204,8 @@ Start a Claude Code session with a project that has at least a few files. Make a
 :::
 
 :::resources{title="Go Deeper"}
-- [Git Basics (Curriculum)](/learn/curriculum/00-orientation/git-basics) — The foundational lesson on how version control works.
-- [Repos (Curriculum)](/learn/curriculum/00-orientation/repos) — Understanding repositories, remotes, and collaboration.
-- [Oh Shit, Git!?!](https://ohshitgit.com/) — A practical guide to getting out of git messes, in plain language.
-- [Git Documentation](https://git-scm.com/doc) — The official git reference — dense but comprehensive.
+- [Git Basics (Curriculum)](/learn/curriculum/00-orientation/git-basics): The foundational lesson on how version control works.
+- [Repos (Curriculum)](/learn/curriculum/00-orientation/repos): Understanding repositories, remotes, and collaboration.
+- [Oh Shit, Git!?!](https://ohshitgit.com/): A practical guide to getting out of git messes, in plain language.
+- [Git Documentation](https://git-scm.com/doc): The official git reference, dense but comprehensive.
 :::

@@ -54,7 +54,7 @@ The terminal: Look at the terminal where your dev server is running. Are there c
 ```
 
 :::step{number="02" title="Describe the Bug: Observed vs. Expected"}
-The most effective bug description format is two sentences: what you expected to happen, and what actually happened. This gives Claude the gap between intent and reality — which is where the bug lives.
+The most effective bug description format is two sentences: what you expected to happen, and what actually happened. This gives Claude the gap between intent and reality, which is where the bug lives.
 :::
 
 :::template{title="Bug Report Template"}
@@ -167,7 +167,7 @@ I cannot figure out why the project list is empty. Add console.log statements to
 2. In the filter function, log what goes in and what comes out
 3. In the render, log how many items are being mapped
 
-Do not change any logic — just add the logging so I can see what is happening in the console.
+Do not change any logic. Just add the logging so I can see what is happening in the console.
 :::
 
 Check the browser console. The logs will tell you exactly where the data disappears or transforms into something unexpected. Once you find the issue, remove the logging and fix the actual problem.
@@ -207,8 +207,8 @@ Intentionally introduce a bug into your project: rename a data field in one file
 :::
 
 :::resources{title="Go Deeper"}
-- [Systems Thinking (Curriculum)](/learn/curriculum/01-foundation/systems-thinking) — Understanding how parts of a system interact — which is really what debugging is about.
-- [Claude Code (Curriculum)](/learn/curriculum/02-the-medium/claude-code) — Getting the most out of Claude Code, including debugging workflows.
-- [Chrome DevTools Documentation](https://developer.chrome.com/docs/devtools/) — The official guide to Chrome's debugging tools — Console, Network, Elements, and more.
-- [Managing Revision History (Approach)](/learn/approach/revision-history) — The git workflow that gives you safe revert points when debugging gets tough.
+- [Systems Thinking (Curriculum)](/learn/curriculum/01-foundation/systems-thinking): Understanding how parts of a system interact, which is really what debugging is about.
+- [Claude Code (Curriculum)](/learn/curriculum/02-the-medium/claude-code): Getting the most out of Claude Code, including debugging workflows.
+- [Chrome DevTools Documentation](https://developer.chrome.com/docs/devtools/): The official guide to Chrome's debugging tools (Console, Network, Elements, and more).
+- [Managing Revision History (Approach)](/learn/approach/revision-history): The git workflow that gives you safe revert points when debugging gets tough.
 :::

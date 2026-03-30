@@ -14,7 +14,7 @@ prerequisites:
 
 ## What You Will Build
 
-By the end of this guide, you will have a set of use cases that break your PRD into buildable scenarios. Each use case describes one thing a user does with your product — who they are, what they want, and the exact steps they take to get it.
+By the end of this guide, you will have a set of use cases that break your PRD into buildable scenarios. Each use case describes one thing a user does with your product: who they are, what they want, and the exact steps they take to get it.
 
 Use cases are the bridge between "what should this product do?" and "what should I tell Claude Code to build next?" They turn a wall of requirements into a task list.
 
@@ -37,7 +37,7 @@ Write down every distinct actor. Be specific. "User" is too vague. "Freelance de
 :::
 
 :::step{number="03" title="Write the First Use Case"}
-Pick the most important feature in your list — the one that, if it did not work, the product would be pointless. For a portfolio site, that is probably "a visitor views my work and understands what I do."
+Pick the most important feature in your list, the one that, if it did not work, the product would be pointless. For a portfolio site, that is probably "a visitor views my work and understands what I do."
 
 Now write it using this structure: Actor, Goal, Preconditions, Steps, and Outcome. Do not overthink the format. The value is in thinking through the steps, not in making it look pretty.
 :::
@@ -66,7 +66,7 @@ Now write it using this structure: Actor, Goal, Preconditions, Steps, and Outcom
 :::
 
 :::step{number="04" title="Walk Through a Concrete Example"}
-Here is a real use case for a portfolio site contact form. Notice how specific the steps are — each one maps to something that needs to actually exist in the code.
+Here is a real use case for a portfolio site contact form. Notice how specific the steps are. Each one maps to something that needs to actually exist in the code.
 :::
 
 :::template{title="Example: Contact Form"}
@@ -97,12 +97,12 @@ Site owner receives the message in their inbox. Visitor knows the message was se
 - Double submit: disable the button after first click
 :::
 
-> Each step in a use case either describes something the user does or something the system does. Alternate between them. This back-and-forth is exactly how software actually works — input, response, input, response.
+> Each step in a use case either describes something the user does or something the system does. Alternate between them. This back-and-forth is exactly how software actually works: input, response, input, response.
 
 :::step{number="05" title="Write Use Cases for Every Feature"}
 Go through your feature list and write at least one use case per feature. Some features need multiple use cases. A "project gallery" feature might need: view all projects, filter by category, and view a single project detail page.
 
-You do not need to go deep on every edge case for every use case right now. Get the happy path written first — the scenario where everything works as intended. You will discover edge cases when you build.
+You do not need to go deep on every edge case for every use case right now. Get the happy path written first, the scenario where everything works as intended. You will discover edge cases when you build.
 :::
 
 :::step{number="06" title="Prioritize the Use Cases"}
@@ -112,7 +112,7 @@ Your Must Have use cases become your first sprint. They are what you build first
 :::
 
 :::step{number="07" title="Turn Use Cases into Build Tasks"}
-Now translate each use case into specific things Claude Code needs to build. Look at the steps — each one implies components, pages, or logic that must exist.
+Now translate each use case into specific things Claude Code needs to build. Look at the steps. Each one implies components, pages, or logic that must exist.
 
 For the contact form example: Step 2 means the contact section needs to exist on the page, or there needs to be a /contact route. Steps 3-5 mean you need a form component with three fields and a submit button. Step 6 means you need client-side validation. Step 8 means you need a backend endpoint or a form service like Formspree.
 :::
@@ -152,8 +152,8 @@ Take one feature from your PRD and write a complete use case for it. Include at 
 :::
 
 :::resources{title="Go Deeper"}
-- [JTBD (Curriculum)](/learn/curriculum/03-the-pipeline/jtbd) — Jobs to Be Done — the framework for understanding what users actually need, which feeds directly into use cases.
-- [Planning (Curriculum)](/learn/curriculum/01-foundation/planning) — How to scope and shape work before building.
-- [Writing a PRD (Approach)](/learn/approach/writing-a-prd) — The guide that comes before this one — your PRD feeds your use cases.
-- [Alistair Cockburn — Writing Effective Use Cases](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258) — The definitive book on use case writing, if you want to go deep.
+- [JTBD (Curriculum)](/learn/curriculum/03-the-pipeline/jtbd): Jobs to Be Done, the framework for understanding what users actually need, which feeds directly into use cases.
+- [Planning (Curriculum)](/learn/curriculum/01-foundation/planning): How to scope and shape work before building.
+- [Writing a PRD (Approach)](/learn/approach/writing-a-prd): The guide that comes before this one. Your PRD feeds your use cases.
+- [Alistair Cockburn, Writing Effective Use Cases](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258): The definitive book on use case writing, if you want to go deep.
 :::

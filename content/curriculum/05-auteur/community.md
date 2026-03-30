@@ -12,7 +12,7 @@ Building with AI can feel solitary. It is you and your agents, late at night, sh
 
 This solitude is the dark side of the empowerment that AI provides. You can build alone, but you should not think alone. Thinking alone leads to blind spots, echo chambers, and the slow erosion of standards that comes from never having your work challenged.
 
-Community is the antidote. Not a community that validates everything you do — a community that pushes you. People who ask hard questions. Who share approaches you had not considered. Who celebrate your wins and dissect your failures with equal honesty.
+Community is the antidote. Not a community that validates everything you do, but a community that pushes you. People who ask hard questions. Who share approaches you had not considered. Who celebrate your wins and dissect your failures with equal honesty.
 
 > AI gives you the ability to build alone. Community gives you the reason to build well. These are not in tension. They are complementary forces.
 
@@ -22,7 +22,7 @@ You do not need a large community. Three to five people who care about the same 
 
 Where to find them: online communities around the tools you use (Discord servers, GitHub discussions, Reddit). Local meetups for designers and developers. Twitter and Mastodon accounts of people whose work you admire. Open-source projects where contributors interact.
 
-The best way to find your people is to share your work publicly. Write about what you are building. Post your projects. Explain your process. The people who respond — who engage with substance, not just likes — are your potential community.
+The best way to find your people is to share your work publicly. Write about what you are building. Post your projects. Explain your process. The people who respond, who engage with substance, not just likes, are your potential community.
 
 ## Giving Before Taking
 
@@ -34,13 +34,13 @@ The people who build the strongest networks are not the ones who collect the mos
 
 ## Critique and Feedback
 
-The most valuable thing a community provides is honest feedback. Not praise — feedback. Feedback that makes your work better.
+The most valuable thing a community provides is honest feedback. Not praise, but feedback. Feedback that makes your work better.
 
 To get honest feedback, you have to create the conditions for it. Share work-in-progress, not finished products. Ask specific questions: "Does the navigation make sense?" not "What do you think?" Make it safe to criticize by responding to criticism with gratitude, not defensiveness.
 
 Give feedback the way you want to receive it: specific, actionable, and kind. "The font size on mobile is too small to read comfortably" is useful. "I do not like the design" is not. "Have you considered what happens when the list is empty?" is a gift. "Looks good" is polite but useless.
 
-A community where people are honest with each other is more valuable than a community where people are nice to each other. The goal is both — honesty delivered with kindness.
+A community where people are honest with each other is more valuable than a community where people are nice to each other. The goal is both: honesty delivered with kindness.
 
 ## Building a Community
 
@@ -48,22 +48,22 @@ You do not have to join someone else's community. You can start your own. A comm
 
 The structure matters less than the consistency. A weekly "show and tell" where each person spends five minutes sharing what they built or learned. A monthly "retrospective" where you discuss what is working and what is not. A shared channel for quick questions and resource sharing.
 
-What kills small communities is inconsistency. If the weekly meeting happens every other week, then once a month, then never — the community dies. A simple, consistent rhythm maintained over months builds something that sporadic bursts of enthusiasm never will.
+What kills small communities is inconsistency. If the weekly meeting happens every other week, then once a month, then never, the community dies. A simple, consistent rhythm maintained over months builds something that sporadic bursts of enthusiasm never will.
 
 ## Community in the AI Age
 
 AI changes the shape of community but not the need for it. When AI agents can answer most technical questions, the value of community shifts from information to judgment. You do not need a community to tell you how to center a div. You need a community to tell you whether your approach to the whole layout is sound.
 
-The new value of community is: taste, perspective, accountability, and emotional support. Taste — someone who can tell you when something feels off. Perspective — someone who sees the problem differently. Accountability — someone who asks "did you ship it?" Emotional support — someone who understands the struggle of building something from nothing.
+The new value of community is: taste, perspective, accountability, and emotional support. Taste: someone who can tell you when something feels off. Perspective: someone who sees the problem differently. Accountability: someone who asks "did you ship it?" Emotional support: someone who understands the struggle of building something from nothing.
 
 These are irreplaceable by AI. An agent can review your code but cannot tell you whether the project is worth building. A human who understands your goals, your constraints, and your aspirations can.
 
 :::exercise{title="Connect with Three People"}
-Find three people whose work you admire. They can be people you know or people you follow online. Reach out to each one with something specific and genuine: a comment on their work, a question about their process, a compliment on something they built. Not "great work!" — something that shows you actually engaged with what they made. If you do not know anyone yet, find three blog posts or projects you admire and leave a thoughtful comment on each. This is the beginning of your community.
+Find three people whose work you admire. They can be people you know or people you follow online. Reach out to each one with something specific and genuine: a comment on their work, a question about their process, a compliment on something they built. Not "great work!" but something that shows you actually engaged with what they made. If you do not know anyone yet, find three blog posts or projects you admire and leave a thoughtful comment on each. This is the beginning of your community.
 :::
 
 :::resources{title="Go Deeper"}
-- [Get Together by Bailey Richardson, Kevin Huynh & Kai Elmer Sotto](https://www.gettogether.world/) — The practical guide to building communities. Not theory — step-by-step guidance on cultivating meaningful groups.
-- [The Art of Gathering by Priya Parker](https://www.priyaparker.com/the-art-of-gathering) — On how to bring people together with intention. Changes how you think about every meeting, event, and conversation.
-- [Indie Hackers](https://www.indiehackers.com/) — A community of people building products independently. Proof that solo builders thrive when connected to peers.
+- [Get Together by Bailey Richardson, Kevin Huynh & Kai Elmer Sotto](https://www.gettogether.world/). The practical guide to building communities. Not theory, but step-by-step guidance on cultivating meaningful groups.
+- [The Art of Gathering by Priya Parker](https://www.priyaparker.com/the-art-of-gathering). On how to bring people together with intention. Changes how you think about every meeting, event, and conversation.
+- [Indie Hackers](https://www.indiehackers.com/). A community of people building products independently. Proof that solo builders thrive when connected to peers.
 :::

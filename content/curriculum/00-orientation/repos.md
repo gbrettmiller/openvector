@@ -8,8 +8,8 @@ badge: new
 updatedAt: '2026-02-14'
 knowledgeCheck:
   - question: A repository contains much more than just code. What other files live in a typical repo, and why are they important for someone encountering the project for the first time?
-    hint: Think about README.md, .gitignore, package.json, CLAUDE.md — what role does each one play?
-  - question: Why does a good README matter? What happens to a project — even a great one — if it has no README or a confusing one?
+    hint: Think about README.md, .gitignore, package.json, CLAUDE.md. What role does each one play?
+  - question: Why does a good README matter? What happens to a project, even a great one, if it has no README or a confusing one?
   - question: What is the difference between a local repository and a remote repository, and why do you need both?
     hint: Consider what happens if your laptop breaks, or if a teammate needs to see your work.
   - question: The lesson compares Git to email (the protocol) and GitHub to Gmail (a provider). Why is understanding this distinction important when someone says "push to GitHub"?
@@ -17,15 +17,15 @@ knowledgeCheck:
 
 ## Local vs Remote
 
-In the Git Basics lesson, you created a repository on your computer. That is a local repo — it lives on your machine, tracks your changes, and nobody else can see it.
+In the Git Basics lesson, you created a repository on your computer. That is a local repo. It lives on your machine, tracks your changes, and nobody else can see it.
 
 A remote repository is a copy that lives on a server somewhere on the internet. This is where collaboration happens, where backups live, and where deployment starts. When you "push" your code, you are sending your commits from local to remote. When you "pull," you are bringing changes from remote to local.
 
-You can work entirely offline with a local repo. The remote is for sharing, backing up, and deploying. Most developers push to a remote at least once a day — often much more.
+You can work entirely offline with a local repo. The remote is for sharing, backing up, and deploying. Most developers push to a remote at least once a day, often much more.
 
 ## GitHub Is Not Git
 
-This trips up a lot of people. Git is the version control tool — the software that tracks changes on your computer. GitHub is a website that hosts Git repositories and adds collaboration features on top.
+This trips up a lot of people. Git is the version control tool, the software that tracks changes on your computer. GitHub is a website that hosts Git repositories and adds collaboration features on top.
 
 Git was created in 2005. GitHub launched in 2008. Git existed for three years before GitHub was a thing. You can use Git without GitHub. You cannot use GitHub without Git.
 
@@ -35,7 +35,7 @@ GitHub is the most popular host, but it is not the only one. GitLab and Bitbucke
 
 ## Cloning
 
-When you want to work on an existing project, you clone it. git clone <url> downloads the entire repository — every file, every commit, the complete history — to your computer.
+When you want to work on an existing project, you clone it. git clone <url> downloads the entire repository (every file, every commit, the complete history) to your computer.
 
 This is how you get started with other people's code. Found an interesting open source project? Clone it. Your team started a new repo? Clone it. You want to explore how a tool was built? Clone it.
 
@@ -53,33 +53,33 @@ git log --oneline   # See the commit history
 
 ## The README
 
-Every repository should have a README.md file. This is the front door of the project — it tells visitors what it is, how to set it up, and how to use it.
+Every repository should have a README.md file. This is the front door of the project. It tells visitors what it is, how to set it up, and how to use it.
 
 When you visit a repo on GitHub, the README renders automatically below the file list. A good README makes the difference between a project people use and a project people skip.
 
-The .md extension means Markdown — a lightweight formatting language. Headings use #, bold uses **text**, code uses `backticks`. You will learn Markdown naturally because it is everywhere: READMEs, documentation, chat apps, and this very curriculum.
+The .md extension means Markdown, a lightweight formatting language. Headings use #, bold uses **text**, code uses `backticks`. You will learn Markdown naturally because it is everywhere: READMEs, documentation, chat apps, and this very curriculum.
 
 ## Key Files You Will See
 
 Open any well-maintained repository and you will see the same cast of characters:
 
-package.json — The project's identity card. It lists the name, version, dependencies (libraries the project uses), and scripts (commands like "npm run dev" or "npm run build"). If the project runs on Node.js (and most web projects do), this file is the starting point.
+package.json is the project's identity card. It lists the name, version, dependencies (libraries the project uses), and scripts (commands like "npm run dev" or "npm run build"). If the project runs on Node.js (and most web projects do), this file is the starting point.
 
-.gitignore — A list of files and folders Git should not track. node_modules/ (too large, auto-generated), .env (contains secrets), dist/ (build output). This file keeps your repository clean and safe.
+.gitignore is a list of files and folders Git should not track. node_modules/ (too large, auto-generated), .env (contains secrets), dist/ (build output). This file keeps your repository clean and safe.
 
-CLAUDE.md — Instructions for AI coding agents. This is a newer convention — it tells tools like Claude Code how the project works, what patterns to follow, and what to avoid. Think of it as onboarding documentation for your AI collaborator.
+CLAUDE.md provides instructions for AI coding agents. This is a newer convention; it tells tools like Claude Code how the project works, what patterns to follow, and what to avoid. Think of it as onboarding documentation for your AI collaborator.
 
-LICENSE — The legal terms for using the code. MIT means "do whatever you want." GPL means "share your changes too." No license means "technically you cannot use this." For your own projects, MIT is a safe default.
+LICENSE defines the legal terms for using the code. MIT means "do whatever you want." GPL means "share your changes too." No license means "technically you cannot use this." For your own projects, MIT is a safe default.
 
 ## Pushing and Pulling
 
 Once your local repo is connected to a remote (which happens automatically when you clone), two commands keep them in sync:
 
-git push — Send your local commits to the remote. "Here are my changes." If you are working alone, you can push whenever you want. On a team, you push when your work is ready to share.
+git push sends your local commits to the remote. "Here are my changes." If you are working alone, you can push whenever you want. On a team, you push when your work is ready to share.
 
-git pull — Fetch changes from the remote and merge them into your local copy. "Give me the latest." Always pull before you start working if others might have pushed changes. This prevents conflicts.
+git pull fetches changes from the remote and merges them into your local copy. "Give me the latest." Always pull before you start working if others might have pushed changes. This prevents conflicts.
 
-If you created a repo locally (git init) instead of cloning, you need to connect it to a remote first. GitHub walks you through this when you create a new repository — it gives you the exact commands to run.
+If you created a repo locally (git init) instead of cloning, you need to connect it to a remote first. GitHub walks you through this when you create a new repository and gives you the exact commands to run.
 
 ```
 # Push your commits to the remote
@@ -94,12 +94,12 @@ git push -u origin main
 ```
 
 :::exercise{title="Clone and Explore"}
-Go to github.com and find any public repository that interests you (or search for "awesome" lists — they are curated collections of tools and resources). Copy the clone URL (the green "Code" button → HTTPS URL). Open your terminal, navigate to where you keep projects (cd ~/Desktop or similar), and run git clone <paste-url-here>. Enter the folder with cd <project-name>. Run ls -la to see the file structure. Run cat README.md to read the project description right in your terminal. Run git log --oneline to see the commit history. You are now inside someone else's project, reading their work, and seeing their history.
+Go to github.com and find any public repository that interests you (or search for "awesome" lists, which are curated collections of tools and resources). Copy the clone URL (the green "Code" button → HTTPS URL). Open your terminal, navigate to where you keep projects (cd ~/Desktop or similar), and run git clone <paste-url-here>. Enter the folder with cd <project-name>. Run ls -la to see the file structure. Run cat README.md to read the project description right in your terminal. Run git log --oneline to see the commit history. You are now inside someone else's project, reading their work, and seeing their history.
 :::
 
 :::resources{title="Go Deeper"}
-- [GitHub Hello World Guide](https://docs.github.com/en/get-started/start-your-journey/hello-world) — GitHub's official walkthrough for creating your first repository.
-- [GitHub Skills](https://skills.github.com/) — Free interactive courses that teach GitHub workflows step by step.
-- [The Missing Semester — Version Control](https://missing.csail.mit.edu/2020/version-control/) — MIT's deep dive into Git internals. Goes further than you need right now — bookmark it for later.
-- [Awesome README](https://github.com/matiassingers/awesome-readme) — A curated list of excellent README files for inspiration when writing your own.
+- [GitHub Hello World Guide](https://docs.github.com/en/get-started/start-your-journey/hello-world). GitHub's official walkthrough for creating your first repository.
+- [GitHub Skills](https://skills.github.com/). Free interactive courses that teach GitHub workflows step by step.
+- [The Missing Semester: Version Control](https://missing.csail.mit.edu/2020/version-control/). MIT's deep dive into Git internals. Goes further than you need right now, so bookmark it for later.
+- [Awesome README](https://github.com/matiassingers/awesome-readme). A curated list of excellent README files for inspiration when writing your own.
 :::

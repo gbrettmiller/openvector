@@ -28,11 +28,11 @@ Verify: When the agent delivers, check the work. Does it meet the goal? Does it 
 
 Integrate: Merge the work into the main codebase. Make sure it works with everything else. Update the project status. Then loop back to plan.
 
-This loop is fractal — it works at every scale. A single feature takes one loop. A full project takes many loops, nested inside each other.
+This loop is fractal. It works at every scale. A single feature takes one loop. A full project takes many loops, nested inside each other.
 
 ## Sequential vs. Parallel Work
 
-Some tasks must happen in order. You cannot build the UI for an API endpoint that does not exist yet. You cannot deploy a feature that has not been tested. Sequential work has dependencies — each step needs the output of the previous step.
+Some tasks must happen in order. You cannot build the UI for an API endpoint that does not exist yet. You cannot deploy a feature that has not been tested. Sequential work has dependencies; each step needs the output of the previous step.
 
 Other tasks are independent. The frontend and backend of a feature can be built simultaneously if they agree on a contract (the API shape). Documentation can be written while tests are being created. CSS styling can happen while business logic is being debugged.
 
@@ -52,9 +52,9 @@ Without a contract, two agents working in parallel will make different assumptio
 
 ## Session Management
 
-AI agents have context windows — a limit on how much they can remember in a single session. Long sessions accumulate context: previous code, past decisions, error messages, tangents. Eventually, the agent starts losing track of earlier details.
+AI agents have context windows, a limit on how much they can remember in a single session. Long sessions accumulate context: previous code, past decisions, error messages, tangents. Eventually, the agent starts losing track of earlier details.
 
-Good orchestration manages sessions deliberately. Start a fresh session for each major task. Carry forward only what the agent needs — the CLAUDE.md provides the persistent context, and your prompt provides the immediate context.
+Good orchestration manages sessions deliberately. Start a fresh session for each major task. Carry forward only what the agent needs. The CLAUDE.md provides the persistent context, and your prompt provides the immediate context.
 
 When a session gets long and the agent starts making mistakes or forgetting earlier decisions, that is your signal to start fresh. Commit what you have, open a new session, and give it a focused brief: "Here is what exists. Here is what to build next."
 
@@ -64,13 +64,13 @@ Think of sessions as working memory. The CLAUDE.md is long-term memory. Your pro
 
 A practical orchestration workflow for a solo builder with multiple agents:
 
-Morning: Review the project state. What was accomplished yesterday? What is the priority today? Write a brief plan — three to five things to accomplish.
+Morning: Review the project state. What was accomplished yesterday? What is the priority today? Write a brief plan: three to five things to accomplish.
 
 Work blocks: For each task, identify the right agent. Open a session with focused context. Execute the task in stages. Verify after each stage. Commit when complete.
 
 Integration points: After two or three tasks are complete, step back and verify everything works together. Run the full app. Click through the flows. This is where you catch integration issues early.
 
-End of day: Commit everything. Update any status documents. Write a brief note about where you left off — this is your context for tomorrow morning.
+End of day: Commit everything. Update any status documents. Write a brief note about where you left off. This is your context for tomorrow morning.
 
 This rhythm turns orchestration from an abstract concept into a daily practice.
 
@@ -91,7 +91,7 @@ Pick a small feature with a frontend and backend component (a contact form with 
 :::
 
 :::resources{title="Go Deeper"}
-- [Designing Data-Intensive Applications by Martin Kleppmann](https://dataintensive.net/) — The definitive book on distributed systems. Orchestration at the infrastructure level.
-- [A Philosophy of Software Design by John Ousterhout](https://web.stanford.edu/~ouster/cgi-bin/book.php) — On managing complexity through interface design. Directly applicable to agent contracts.
-- [Staff Engineer by Will Larson](https://staffeng.com/book) — On the skill of technical leadership — seeing the whole system and directing the pieces.
+- [Designing Data-Intensive Applications by Martin Kleppmann](https://dataintensive.net/). The definitive book on distributed systems. Orchestration at the infrastructure level.
+- [A Philosophy of Software Design by John Ousterhout](https://web.stanford.edu/~ouster/cgi-bin/book.php). On managing complexity through interface design. Directly applicable to agent contracts.
+- [Staff Engineer by Will Larson](https://staffeng.com/book). On the skill of technical leadership: seeing the whole system and directing the pieces.
 :::

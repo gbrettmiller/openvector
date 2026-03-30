@@ -15,7 +15,7 @@ prerequisites:
 
 ## What You Will Do
 
-Walk through the complete lifecycle of building a single feature — from the moment you decide to build it to the commit that ships it. This is the Zero Vector build loop demonstrated end-to-end with a concrete example: adding a contact form to a portfolio site.
+Walk through the complete lifecycle of building a single feature, from the moment you decide to build it to the commit that ships it. This is the Zero Vector build loop demonstrated end-to-end with a concrete example: adding a contact form to a portfolio site.
 
 This is not abstract. You are going to follow along and build this feature yourself. By the end, you will have internalized the rhythm: plan, describe, build, review, test, commit. Every feature you ever build follows this same loop.
 
@@ -70,7 +70,7 @@ git commit -m "checkpoint: before adding contact form"
 ```
 
 :::step{number="04" title="Plan the Components"}
-Think about what needs to exist for this feature to work. Not the code — the pieces. What components? What files? What data flows where?
+Think about what needs to exist for this feature to work. Not the code, the pieces. What components? What files? What data flows where?
 
 For the contact form: you need a ContactForm component (the form itself), you might need a FormField component (reusable input with label and error), and you need to add the section to the homepage. That is three pieces of work.
 
@@ -78,7 +78,7 @@ Thinking in components before coding is the design step that most people skip. I
 :::
 
 :::step{number="05" title="Give the First Instruction"}
-Start Claude Code and give it a clear, specific instruction for the first component. Start with the smallest, most independent piece — in this case, the form component itself.
+Start Claude Code and give it a clear, specific instruction for the first component. Start with the smallest, most independent piece. In this case, the form component itself.
 :::
 
 :::template{title="First Instruction"}
@@ -111,7 +111,7 @@ If something is wrong, tell Claude now. "The error messages should appear below 
 :::
 
 :::step{number="07" title="Integrate the Component"}
-Now tell Claude to add the contact form to the homepage. This is the integration step — connecting the new piece to the existing structure.
+Now tell Claude to add the contact form to the homepage. This is the integration step, connecting the new piece to the existing structure.
 :::
 
 :::template{title="Integration Instruction"}
@@ -133,7 +133,7 @@ Open the dev server and test the feature in the browser. This is not optional. C
 npm run dev
 ```
 
-Test every path: Submit with all fields empty — do you see validation errors? Submit with an invalid email — does it catch it? Fill in everything correctly and submit — does the success message appear? Refresh the page — does the form reset cleanly? Open it on your phone (or use responsive mode in dev tools at 375px) — does it look right?
+Test every path. Submit with all fields empty. Do you see validation errors? Submit with an invalid email. Does it catch it? Fill in everything correctly and submit. Does the success message appear? Refresh the page. Does the form reset cleanly? Open it on your phone (or use responsive mode in dev tools at 375px). Does it look right?
 
 Make a list of anything that is not right. You will fix it all in the next step.
 
@@ -176,13 +176,13 @@ Notice: we staged specific files, not git add all. This ensures we only commit t
 Repeat for every feature. The rhythm gets faster as you internalize it. After a few features, this stops being a checklist and becomes instinct.
 
 :::exercise{title="Try It"}
-Pick a feature from your project plan — something you can build in one session. Follow every step in this guide. Write the feature description. Make the checkpoint commit. Plan the components. Give Claude the instruction. Test. Fix. Review. Commit. Do not skip steps, even if they feel unnecessary. The discipline is the point.
+Pick a feature from your project plan, something you can build in one session. Follow every step in this guide. Write the feature description. Make the checkpoint commit. Plan the components. Give Claude the instruction. Test. Fix. Review. Commit. Do not skip steps, even if they feel unnecessary. The discipline is the point.
 :::
 
 :::resources{title="Go Deeper"}
-- [Architecture (Curriculum)](/learn/curriculum/01-foundation/architecture) — Understanding the structure of applications — what components are and how they fit together.
-- [Claude Code (Curriculum)](/learn/curriculum/02-the-medium/claude-code) — How to work with Claude Code effectively as your build tool.
-- [Giving Effective Instructions (Approach)](/learn/approach/effective-instructions) — How to write the clear, specific instructions that produce the best results.
-- [Managing Revision History (Approach)](/learn/approach/revision-history) — The git workflow that keeps you safe when AI is writing code.
-- [Testing (Curriculum)](/learn/curriculum/03-the-pipeline/testing) — How to test what you build — not just "does it load" but "does it work."
+- [Architecture (Curriculum)](/learn/curriculum/01-foundation/architecture): Understanding the structure of applications, what components are and how they fit together.
+- [Claude Code (Curriculum)](/learn/curriculum/02-the-medium/claude-code): How to work with Claude Code effectively as your build tool.
+- [Giving Effective Instructions (Approach)](/learn/approach/effective-instructions): How to write the clear, specific instructions that produce the best results.
+- [Managing Revision History (Approach)](/learn/approach/revision-history): The git workflow that keeps you safe when AI is writing code.
+- [Testing (Curriculum)](/learn/curriculum/03-the-pipeline/testing): How to test what you build, not just "does it load" but "does it work."
 :::

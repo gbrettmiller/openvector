@@ -7,11 +7,11 @@ status: available
 badge: new
 updatedAt: '2026-02-14'
 knowledgeCheck:
-  - question: DNS translates domain names into IP addresses. Why do we need this translation layer — why not just use IP addresses directly?
+  - question: DNS translates domain names into IP addresses. Why do we need this translation layer? Why not just use IP addresses directly?
     hint: Think about what would happen if a server moved to a different IP address, and how many addresses you would need to memorize.
   - question: When you type a URL into your browser, what happens behind the scenes before the page starts loading? Walk through the DNS lookup process.
   - question: Why do DNS changes take time to propagate across the internet, and what should you do (and not do) while waiting?
-    hint: Think about caching — DNS servers around the world remember old answers for a while.
+    hint: Think about caching. DNS servers around the world remember old answers for a while.
   - question: What is the difference between an A record and a CNAME record, and why do hosting platforms like Netlify prefer CNAME records?
 ---
 
@@ -29,11 +29,11 @@ DNS translates human-readable names into machine-readable addresses. We remember
 
 A domain name has parts, and each part means something. Take www.zerovector.design:
 
-.design is the TLD — the top-level domain. Classic ones are .com, .org, .net. Newer ones like .design, .dev, .io, and .app exist for more specific identities.
+.design is the TLD, the top-level domain. Classic ones are .com, .org, .net. Newer ones like .design, .dev, .io, and .app exist for more specific identities.
 
-zerovector is the second-level domain — the name you buy. This is the part that is yours.
+zerovector is the second-level domain, the name you buy. This is the part that is yours.
 
-www is a subdomain — an optional prefix. You can create any subdomain you want: blog.zerovector.design, docs.zerovector.design, staging.zerovector.design. Each one can point to a different server.
+www is a subdomain, an optional prefix. You can create any subdomain you want: blog.zerovector.design, docs.zerovector.design, staging.zerovector.design. Each one can point to a different server.
 
 You buy domains from registrars. Namecheap, Cloudflare, and Porkbun are popular for individual developers. Prices range from $8 to $15 per year for common TLDs. Once you own a domain, you control where it points.
 
@@ -41,11 +41,11 @@ You buy domains from registrars. Namecheap, Cloudflare, and Porkbun are popular 
 
 You do not need to memorize every type of DNS record. You need to recognize three:
 
-A record — Points a domain directly to an IP address. "zerovector.design should go to 104.21.45.67." This is the most fundamental record.
+A record points a domain directly to an IP address. "zerovector.design should go to 104.21.45.67." This is the most fundamental record.
 
-CNAME record — Points a domain to another domain name. "www.zerovector.design should go wherever zerovector.design goes." Like a forwarding address. Hosting platforms love these because they let you point your domain to their servers without knowing the IP address.
+CNAME record points a domain to another domain name. "www.zerovector.design should go wherever zerovector.design goes." Like a forwarding address. Hosting platforms love these because they let you point your domain to their servers without knowing the IP address.
 
-TXT record — Plain text attached to your domain. Used for verification. When Netlify says "add this TXT record to prove you own this domain," you paste their string into a TXT record. It is a handshake.
+TXT record is plain text attached to your domain. Used for verification. When Netlify says "add this TXT record to prove you own this domain," you paste their string into a TXT record. It is a handshake.
 
 That is it for now. There are other record types (MX for email, AAAA for IPv6), but these three handle 95% of what you will do as a developer deploying web projects.
 
@@ -66,11 +66,11 @@ zerovector.design    TXT    "netlify-verify=abc123def456"
 
 Here is where the previous lesson and this one meet:
 
-You deployed your site (Deployment lesson). Netlify gave you a URL like my-project.netlify.app. It works. People can visit it. But you want your own domain — my-project.com — pointing there instead.
+You deployed your site (Deployment lesson). Netlify gave you a URL like my-project.netlify.app. It works. People can visit it. But you want your own domain, my-project.com, pointing there instead.
 
 The process: go to your domain registrar's DNS settings. Add a CNAME record pointing your domain to my-project.netlify.app. Tell Netlify about your custom domain in the site settings. Wait.
 
-That is the whole process. Two configuration changes — one at your registrar, one at your hosting platform — and your custom domain serves your deployed site. Netlify even handles the SSL certificate automatically.
+That is the whole process. Two configuration changes (one at your registrar, one at your hosting platform) and your custom domain serves your deployed site. Netlify even handles the SSL certificate automatically.
 
 ## Propagation
 
@@ -108,12 +108,12 @@ dig +short zerovector.design
 ```
 
 :::exercise{title="Look Up a Domain"}
-Open your terminal and run dig google.com (Mac/Linux) or nslookup google.com (Windows). Look at the ANSWER section — you will see one or more IP addresses. That is where Google lives on the internet. Now try dig zerovector.design. Try dig github.com. Try your own domain if you have one. Every domain you visit every day resolves to a number through this exact process. You just watched it happen.
+Open your terminal and run dig google.com (Mac/Linux) or nslookup google.com (Windows). Look at the ANSWER section; you will see one or more IP addresses. That is where Google lives on the internet. Now try dig zerovector.design. Try dig github.com. Try your own domain if you have one. Every domain you visit every day resolves to a number through this exact process. You just watched it happen.
 :::
 
 :::resources{title="Go Deeper"}
-- [How DNS Works (visual explainer)](https://howdns.works/) — A charming, illustrated comic that walks through a DNS lookup step by step. Best explanation on the internet.
-- [Cloudflare — What Is DNS?](https://www.cloudflare.com/learning/dns/what-is-dns/) — Cloudflare's learning center has thorough, well-written articles on every DNS concept.
-- [Julia Evans — DNS Zines](https://wizardzines.com/zines/dns/) — Illustrated zines that make DNS click. Julia Evans has a gift for making infrastructure approachable.
-- [DNS Checker](https://dnschecker.org/) — Check DNS propagation worldwide. Essential tool when you are waiting for a domain change to take effect.
+- [How DNS Works (visual explainer)](https://howdns.works/). A charming, illustrated comic that walks through a DNS lookup step by step. Best explanation on the internet.
+- [Cloudflare: What Is DNS?](https://www.cloudflare.com/learning/dns/what-is-dns/). Cloudflare's learning center has thorough, well-written articles on every DNS concept.
+- [Julia Evans: DNS Zines](https://wizardzines.com/zines/dns/). Illustrated zines that make DNS click. Julia Evans has a gift for making infrastructure approachable.
+- [DNS Checker](https://dnschecker.org/). Check DNS propagation worldwide. Essential tool when you are waiting for a domain change to take effect.
 :::

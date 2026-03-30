@@ -10,7 +10,7 @@ knowledgeCheck:
   - question: What is the difference between Zero Vector Design and vibe coding?
     hint: Think about intent, architecture, and understanding the system vs. reactive prompting.
   - question: What does "Auteur" mean in the context of this curriculum?
-    hint: Think about the film director analogy — vision, direction, and crew.
+    hint: Think about the film director analogy, including vision, direction, and crew.
 ---
 
 ## What Is Zero Vector Design?
@@ -51,17 +51,17 @@ The difference is intent. Vibe coding is "let's see what happens." Zero Vector i
 
 This curriculum has six levels. Each one builds on the last.
 
-Level 00 — Orientation is where you are now. You will learn the tools of the trade: the terminal, file systems, Git, deployment, DNS. These are the instruments you need before you can play the music. No shortcuts here.
+Level 00, Orientation, is where you are now. You will learn the tools of the trade: the terminal, file systems, Git, deployment, DNS. These are the instruments you need before you can play the music. No shortcuts here.
 
-Level 01 — Foundation teaches you how to think in systems. Architecture, planning, data modeling, information architecture. This is the conceptual backbone that makes everything else possible. You will also meet VECTOR.md, the central artifact of the Zero Vector methodology.
+Level 01, Foundation, teaches you how to think in systems. Architecture, planning, data modeling, information architecture. This is the conceptual backbone that makes everything else possible. You will also meet VECTOR.md, the central artifact of the Zero Vector methodology.
 
-Level 02 — The Build is where you get your hands dirty. You will set up a real development environment, scaffold a project, and start building with AI agents doing the heavy lifting under your direction.
+Level 02, The Build, is where you get your hands dirty. You will set up a real development environment, scaffold a project, and start building with AI agents doing the heavy lifting under your direction.
 
-Level 03 — The Pipeline walks you through the full product development cycle: research, synthesis, jobs to be done, ideation, prototyping, validation, shipping. And you will meet Investiture, the framework that ties it all together.
+Level 03, The Pipeline, walks you through the full product development cycle: research, synthesis, jobs to be done, ideation, prototyping, validation, shipping. And you will meet Investiture, the framework that ties it all together.
 
-Level 04 — Orchestration is where you learn to direct multiple AI agents as a coordinated crew. CLAUDE.md files, prompt engineering, context management, multi-agent workflows.
+Level 04, Orchestration, is where you learn to direct multiple AI agents as a coordinated crew. CLAUDE.md files, prompt engineering, context management, multi-agent workflows.
 
-Level 05 — The Capstone is the final level. You will build a complete, polished application from scratch using everything you have learned. Not a toy. A real, shippable product.
+Level 05, The Capstone, is the final level. You will build a complete, polished application from scratch using everything you have learned. Not a toy. A real, shippable product.
 
 By the end, you will not just know about building with AI. You will have done it.
 
@@ -74,11 +74,11 @@ Open Vector is the free, open curriculum arm of Zero Vector Design. The philosop
 Everything here is free. No trials, no premium tiers, no "sign up for the full version." If you do the work, you get the skills.
 
 :::exercise{title="Before You Begin"}
-Make sure you have: a computer (Mac, Windows, or Linux — all work), an internet connection (you will be installing tools and cloning repositories), willingness to type commands (this curriculum uses the terminal extensively — if that feels unfamiliar, good, that is why Level 00 exists), and curiosity (the most important prerequisite is wanting to understand how things work, not just that they work). You do not need prior coding experience. You do not need a computer science degree. You do not need to know what a terminal is yet. That is what the next lesson teaches.
+Make sure you have: a computer (Mac, Windows, or Linux, all of which work), an internet connection (you will be installing tools and cloning repositories), willingness to type commands (this curriculum uses the terminal extensively, and if that feels unfamiliar, good, that is why Level 00 exists), and curiosity (the most important prerequisite is wanting to understand how things work, not just that they work). You do not need prior coding experience. You do not need a computer science degree. You do not need to know what a terminal is yet. That is what the next lesson teaches.
 :::
 
 :::resources{title="Links"}
-- [Zero Vector Design](https://zerovector.design) — The Zero Vector Design home.
-- [The Zero Vector Manifesto](https://zerovector.design/philosophy) — The philosophy in full.
-- [Substack: Erika Flowers](https://eflowers.substack.com) — Essays on the methodology and the movement.
+- [Zero Vector Design](https://zerovector.design). The Zero Vector Design home.
+- [The Zero Vector Manifesto](https://zerovector.design/philosophy). The philosophy in full.
+- [Substack: Erika Flowers](https://eflowers.substack.com). Essays on the methodology and the movement.
 :::

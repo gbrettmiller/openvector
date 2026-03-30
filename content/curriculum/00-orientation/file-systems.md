@@ -17,9 +17,9 @@ knowledgeCheck:
 
 ## What Is a File System?
 
-Everything on your computer is a file inside a folder. A photo is a file. A Word document is a file. The application you used to open that document? Also files — hundreds of them — living inside a folder.
+Everything on your computer is a file inside a folder. A photo is a file. A Word document is a file. The application you used to open that document? Also files, hundreds of them, living inside a folder.
 
-Folders can contain other folders, which can contain other folders, forming a tree. Your operating system shows you a visual representation of this tree — Finder on Mac, File Explorer on Windows — but underneath the interface, it is all paths. Every file has an address, and learning to read that address is like learning to read a map.
+Folders can contain other folders, which can contain other folders, forming a tree. Your operating system shows you a visual representation of this tree (Finder on Mac, File Explorer on Windows), but underneath the interface, it is all paths. Every file has an address, and learning to read that address is like learning to read a map.
 
 > Every file on your computer has an address. When you can read that address, you can find anything, reference anything, and fix almost any "file not found" error you will ever encounter.
 
@@ -44,17 +44,17 @@ C:\Users\yourname\Desktop\project\index.html
 
 ## Your Home Directory
 
-Every user on a computer has a home directory. This is your personal space — where your Desktop, Documents, Downloads, and project folders live.
+Every user on a computer has a home directory. This is your personal space, where your Desktop, Documents, Downloads, and project folders live.
 
 On Mac: /Users/yourname. On Linux: /home/yourname. On Windows: C:\Users\yourname. In the terminal, the tilde symbol (~) is a shortcut for your home directory. So ~/Desktop means /Users/yourname/Desktop. You will see the tilde everywhere.
 
-The root directory (just /) is the very top of the entire file system. Everything branches down from there — system files, applications, user directories, all of it. You will rarely need to go to root, but knowing it exists helps you read absolute paths.
+The root directory (just /) is the very top of the entire file system. Everything branches down from there: system files, applications, user directories, all of it. You will rarely need to go to root, but knowing it exists helps you read absolute paths.
 
 ## Hidden Files and Dotfiles
 
 Files and folders that start with a dot (.) are hidden by default. You will not see them in Finder or File Explorer unless you ask. But they are there, and they matter enormously.
 
-.gitignore tells Git which files to ignore. .env stores secret keys and passwords. .eslintrc configures your code linter. CLAUDE.md gives instructions to AI agents. These "dotfiles" are configuration — they control how your tools behave.
+.gitignore tells Git which files to ignore. .env stores secret keys and passwords. .eslintrc configures your code linter. CLAUDE.md gives instructions to AI agents. These "dotfiles" are configuration. They control how your tools behave.
 
 To see hidden files in the terminal: ls -a. To see them in Mac Finder: press Cmd+Shift+Period. To see them in Windows Explorer: View → Show → Hidden items.
 
@@ -64,15 +64,15 @@ A word of caution: .env files often contain passwords and API keys. Never commit
 
 When you work on a web project, you will see a common pattern in how files are organized. Understanding this pattern means you can open any project and quickly find what you need.
 
-src/ — Source code. Your components, pages, styles, and logic live here. This is where you do your work.
+src/ is your source code. Your components, pages, styles, and logic live here. This is where you do your work.
 
-public/ — Static assets served as-is. Images, fonts, favicon. These do not get processed by the build tool.
+public/ is for static assets served as-is. Images, fonts, favicon. These do not get processed by the build tool.
 
-node_modules/ — Every library your project depends on. This folder is enormous and auto-generated. Never edit it. Never commit it to Git.
+node_modules/ contains every library your project depends on. This folder is enormous and auto-generated. Never edit it. Never commit it to Git.
 
-package.json — Your project's identity card. Lists its name, dependencies, and scripts (commands like "npm run dev").
+package.json is your project's identity card. Lists its name, dependencies, and scripts (commands like "npm run dev").
 
-dist/ or build/ — The compiled output. When you build your project for production, the optimized files land here. This is what gets deployed.
+dist/ or build/ is the compiled output. When you build your project for production, the optimized files land here. This is what gets deployed.
 
 You do not need to memorize this. You need to recognize it. When you see src/, you know where the real code is. When you see node_modules/, you know to leave it alone.
 
@@ -92,11 +92,11 @@ my-project/
 ```
 
 :::exercise{title="Explore Your File System"}
-Open your terminal. Run pwd to see where you are. Run ls -la to see everything in your current directory, including hidden files. Count the dotfiles — you will probably see more than you expected. Now navigate to your Desktop: cd ~/Desktop. Create a practice project structure: mkdir -p my-project/src my-project/public. Run ls my-project to see the folders you created. Navigate inside: cd my-project. Run touch package.json .gitignore README.md to create the key files. Run ls -a to see everything, including the hidden .gitignore. You just built a project skeleton by hand.
+Open your terminal. Run pwd to see where you are. Run ls -la to see everything in your current directory, including hidden files. Count the dotfiles; you will probably see more than you expected. Now navigate to your Desktop: cd ~/Desktop. Create a practice project structure: mkdir -p my-project/src my-project/public. Run ls my-project to see the folders you created. Navigate inside: cd my-project. Run touch package.json .gitignore README.md to create the key files. Run ls -a to see everything, including the hidden .gitignore. You just built a project skeleton by hand.
 :::
 
 :::resources{title="Go Deeper"}
-- [The Missing Semester — Files and Directories](https://missing.csail.mit.edu/2020/course-shell/) — The shell lecture covers navigating and manipulating files in depth.
-- [MDN: Dealing with Files](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — Mozilla's guide to file structure for web projects. Clear and beginner-friendly.
-- [How to Organize Your Project](https://vite.dev/guide/) — Vite's getting started guide shows the standard project layout you will see in modern web apps.
+- [The Missing Semester: Files and Directories](https://missing.csail.mit.edu/2020/course-shell/). The shell lecture covers navigating and manipulating files in depth.
+- [MDN: Dealing with Files](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files). Mozilla's guide to file structure for web projects. Clear and beginner-friendly.
+- [How to Organize Your Project](https://vite.dev/guide/). Vite's getting started guide shows the standard project layout you will see in modern web apps.
 :::

@@ -20,7 +20,7 @@ A properly structured project with version control, a clear folder layout, and a
 Skipping this step is how projects become unmaintainable. Spending twenty minutes here saves twenty hours later.
 
 :::step{number="01" title="Create and Enter Your Project Folder"}
-Choose a meaningful name. Not "test" or "project1" — something that describes what this is.
+Choose a meaningful name. Not "test" or "project1," but something that describes what this is.
 :::
 
 ```
@@ -29,7 +29,7 @@ cd my-portfolio-site
 ```
 
 :::step{number="02" title="Initialize Git"}
-Git tracks every change you make. It is your unlimited undo button and your collaboration layer. Initialize it immediately — before you write any code.
+Git tracks every change you make. It is your unlimited undo button and your collaboration layer. Initialize it immediately, before you write any code.
 :::
 
 ```
@@ -86,7 +86,7 @@ public/        — Static assets (images, fonts)
 Fill this in with your actual project details. The more specific you are, the better Claude Code will understand your project. This file is read automatically every time Claude Code starts in this directory.
 
 :::step{number="04" title="Create Your Folder Structure"}
-Set up the skeleton before writing any code. This is information architecture — deciding where things live before they exist.
+Set up the skeleton before writing any code. This is information architecture, deciding where things live before they exist.
 :::
 
 ```
@@ -102,7 +102,7 @@ npm init -y
 ```
 
 :::step{number="06" title="Create a .gitignore"}
-Tell Git which files to ignore — things like installed packages, build output, and environment files with secrets.
+Tell Git which files to ignore: installed packages, build output, and environment files with secrets.
 :::
 
 :::template{title="Standard .gitignore"}
@@ -122,7 +122,7 @@ git add .
 git commit -m "Initial project structure and CLAUDE.md"
 ```
 
-> Commit early, commit often. Every meaningful change gets a commit. This is not optional — it is how you build a safety net. If something breaks, you can always go back to the last commit that worked.
+> Commit early, commit often. Every meaningful change gets a commit. This is not optional. It is how you build a safety net. If something breaks, you can always go back to the last commit that worked.
 
 :::step{number="08" title="Start Claude Code and Verify"}
 Now start Claude Code in your project directory:
@@ -132,18 +132,18 @@ Now start Claude Code in your project directory:
 claude
 ```
 
-Ask Claude to describe the project. If it reads your CLAUDE.md correctly, it will know what the project is, what stack you are using, and what conventions to follow. That is the test — if the AI understands your project structure, you set it up correctly.
+Ask Claude to describe the project. If it reads your CLAUDE.md correctly, it will know what the project is, what stack you are using, and what conventions to follow. That is the test. If the AI understands your project structure, you set it up correctly.
 
 ## Your Project is Ready
 
 You now have: a clean folder structure, version control tracking every change, a CLAUDE.md that communicates your intentions to AI tools, and a first commit to anchor everything.
 
-This takes fifteen minutes and saves you from the number one mistake people make with AI coding tools: starting without structure. Without this foundation, your project becomes a tangle of files that nobody — including the AI — can navigate.
+This takes fifteen minutes and saves you from the number one mistake people make with AI coding tools: starting without structure. Without this foundation, your project becomes a tangle of files that nobody, including the AI, can navigate.
 
 Next: write a PRD that describes what you are actually building, so your instructions to Claude Code are grounded in a clear plan.
 
 :::resources{title="Go Deeper"}
-- [CLAUDE.md (Curriculum)](/learn/curriculum/04-orchestration/claude-md) — The full lesson on writing effective CLAUDE.md files.
-- [Git Basics (Curriculum)](/learn/curriculum/00-orientation/git-basics) — How version control works and why it matters.
-- [Architecture (Curriculum)](/learn/curriculum/01-foundation/architecture) — How to see the structure behind applications.
+- [CLAUDE.md (Curriculum)](/learn/curriculum/04-orchestration/claude-md): The full lesson on writing effective CLAUDE.md files.
+- [Git Basics (Curriculum)](/learn/curriculum/00-orientation/git-basics): How version control works and why it matters.
+- [Architecture (Curriculum)](/learn/curriculum/01-foundation/architecture): How to see the structure behind applications.
 :::

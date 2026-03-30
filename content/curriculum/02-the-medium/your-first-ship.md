@@ -36,13 +36,13 @@ Step 3: Build. Work with Claude Code, one component at a time. Build the layout 
 
 Step 4: Polish. Responsive layout. Consistent spacing. Good typography. Real content (not lorem ipsum). A favicon. A page title. The small things that make the difference between "a project" and "my project."
 
-Step 5: Ship. Push to main. Verify the deploy. Send the URL to someone. That last step — sending the URL — is when it becomes real.
+Step 5: Ship. Push to main. Verify the deploy. Send the URL to someone. That last step, sending the URL, is when it becomes real.
 
 ## Project Ideas
 
 If you need inspiration, here are ten projects that fit the criteria:
 
-A personal portfolio with three case studies (even if the case studies are short — they can grow over time).
+A personal portfolio with three case studies (even if the case studies are short; they can grow over time).
 
 A reading list: books you have read this year, with covers and one-sentence reviews.
 
@@ -50,7 +50,7 @@ A link collection: your favorite resources on a topic, organized by category.
 
 A recipe page: five of your favorite recipes, beautifully presented.
 
-A fan page for a book, movie, game, or artist — curated information with your commentary.
+A fan page for a book, movie, game, or artist, with curated information and your commentary.
 
 A local guide: your favorite restaurants, parks, and spots in your city.
 
@@ -80,14 +80,14 @@ Once your project is live, take a moment. You just built a thing on the internet
 
 Now iterate. Look at it on your phone. Show it to a friend. Notice what you want to change. Open Claude Code and make those changes. Push. The site updates.
 
-Add it to your portfolio. Write a post about what you built. Share the URL. The project is not just a learning exercise — it is proof of capability. You can look at a problem, plan a solution, direct an AI to build it, and ship it. That is a skill employers and clients are desperate for.
+Add it to your portfolio. Write a post about what you built. Share the URL. The project is not just a learning exercise. It is proof of capability. You can look at a problem, plan a solution, direct an AI to build it, and ship it. That is a skill employers and clients are desperate for.
 
 :::exercise{title="Ship It"}
 Right now. Pick a project from the ideas list (or use your own). Set a timer for three hours. Follow the five-step process: plan (15 min), set up and deploy the empty project (15 min), build with Claude Code (2 hours), polish (20 min), ship and send the URL to someone (10 min). At the end of three hours, whatever state it is in, it ships. Done is better than perfect. Live is better than local. Ship it.
 :::
 
 :::resources{title="Go Deeper"}
-- [Ship It! by Jared Richardson and Will Gwaltney](https://pragprog.com/titles/prj/ship-it/) — A classic on the practice of shipping software. Short, opinionated, and practical.
-- [Netlify Drop](https://app.netlify.com/drop) — Drag and drop a folder to deploy instantly. The fastest path from files to live site.
-- [Zero Vector — The Manifesto](https://zerovector.design/) — Read (or re-read) the manifesto. You are now practicing what it preaches.
+- [Ship It! by Jared Richardson and Will Gwaltney](https://pragprog.com/titles/prj/ship-it/): A classic on the practice of shipping software. Short, opinionated, and practical.
+- [Netlify Drop](https://app.netlify.com/drop): Drag and drop a folder to deploy instantly. The fastest path from files to live site.
+- [Zero Vector: The Manifesto](https://zerovector.design/): Read (or re-read) the manifesto. You are now practicing what it preaches.
 :::

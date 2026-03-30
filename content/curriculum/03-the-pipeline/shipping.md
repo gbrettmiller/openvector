@@ -8,17 +8,17 @@ status: available
 
 ## Shipping Is a Skill
 
-Shipping is the act of putting your work into the world. Not "finishing" it — work is never finished. Shipping is declaring: "This is good enough to be useful, and I am releasing it so that real people can use it and I can learn from what happens."
+Shipping is the act of putting your work into the world. Not "finishing" it. Work is never finished. Shipping is declaring: "This is good enough to be useful, and I am releasing it so that real people can use it and I can learn from what happens."
 
-Shipping is a skill because it requires a specific kind of judgment: knowing when something is ready. Not perfect — ready. The difference between a builder who ships and one who does not is not talent. It is the willingness to release something imperfect and improve it in public.
+Shipping is a skill because it requires a specific kind of judgment: knowing when something is ready. Not perfect. Ready. The difference between a builder who ships and one who does not is not talent. It is the willingness to release something imperfect and improve it in public.
 
-Everything in this pipeline — research, synthesis, JTBD, ideation, prototyping, validation — has been preparation for this moment. You understand the problem. You have tested the solution. Now you let it go.
+Everything in this pipeline (research, synthesis, JTBD, ideation, prototyping, validation) has been preparation for this moment. You understand the problem. You have tested the solution. Now you let it go.
 
 > Shipping is not the end of the process. It is the beginning of the real learning. Everything before shipping is hypothesis. Everything after is data.
 
 ## The Ship Checklist
 
-Before you ship, verify the essentials. Not everything — the essentials:
+Before you ship, verify the essentials. Not everything, just the essentials:
 
 Core jobs work. Can users accomplish the primary tasks without getting stuck? If yes, ship. If no, fix those first.
 
@@ -48,13 +48,13 @@ Analytics: If you have added basic analytics (Google Analytics, Plausible, etc.)
 
 Contact channel: A simple way for users to reach you. A contact form, an email address, a link to a GitHub issue tracker. Make it easy for people to tell you what is broken or missing.
 
-Your own usage: Use your own product. Every friction you feel, every feature you wish existed, every moment of confusion — note it. You are your most accessible test user.
+Your own usage: Use your own product. Every friction you feel, every feature you wish existed, every moment of confusion: note it. You are your most accessible test user.
 
 ## The Iteration Cycle
 
 Shipping is not the end. It is the start of the tightest iteration cycle yet: ship → observe → learn → improve → ship again.
 
-In Level 02, you learned to iterate on components. Now you iterate on the product. The cycle is the same — build, look, adjust — but the feedback is real. Real users, real behavior, real outcomes.
+In Level 02, you learned to iterate on components. Now you iterate on the product. The cycle is the same (build, look, adjust) but the feedback is real. Real users, real behavior, real outcomes.
 
 Prioritize ruthlessly. After launch, you will have a list of fifty things to improve. You cannot do fifty things. Pick the three that will make the biggest difference for the most users. Do those. Ship them. Then pick the next three.
 
@@ -83,8 +83,8 @@ Take the project you have built through this level (or any project you have been
 :::
 
 :::resources{title="Go Deeper"}
-- [Shape Up by Basecamp](https://basecamp.com/shapeup) — How to scope, build, and ship in six-week cycles. The best book on shipping discipline.
-- [The Practice by Seth Godin](https://seths.blog/thepractice/) — On the discipline of shipping creative work. "Ship before you are ready."
-- [Indie Hackers](https://www.indiehackers.com/) — A community of people building and shipping products independently. Inspiring case studies and honest retrospectives.
-- [Building in Public (Kevon Cheung)](https://www.buildinpublic.com/) — A guide to sharing your building process and creating an audience around your work.
+- [Shape Up by Basecamp](https://basecamp.com/shapeup). How to scope, build, and ship in six-week cycles. The best book on shipping discipline.
+- [The Practice by Seth Godin](https://seths.blog/thepractice/). On the discipline of shipping creative work. "Ship before you are ready."
+- [Indie Hackers](https://www.indiehackers.com/). A community of people building and shipping products independently. Inspiring case studies and honest retrospectives.
+- [Building in Public (Kevon Cheung)](https://www.buildinpublic.com/). A guide to sharing your building process and creating an audience around your work.
 :::

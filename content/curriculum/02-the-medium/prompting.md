@@ -65,7 +65,7 @@ You rarely get exactly what you want on the first prompt. That is fine. Promptin
 
 Start broad, then refine. "Build the book list component." Review the output. "Add a search filter at the top." Review again. "The search should filter as you type, not on submit." Each prompt narrows in on what you actually want.
 
-This is not failure — it is design iteration. You would not expect a wireframe to be perfect on the first sketch. The same applies here. The advantage of AI is that each iteration takes seconds, not hours.
+This is not failure; it is design iteration. You would not expect a wireframe to be perfect on the first sketch. The same applies here. The advantage of AI is that each iteration takes seconds, not hours.
 
 The key discipline: review before continuing. Do not stack five instructions without looking at the output from the first one. Each review is a chance to catch misunderstandings early.
 
@@ -81,7 +81,7 @@ Request explanations: "Add error handling to the API call and explain each choic
 
 ## What Not to Do
 
-Do not be vague and then blame the agent. "Make it look good" is not an instruction — it is a wish. If the output does not match your vision, the prompt did not describe your vision.
+Do not be vague and then blame the agent. "Make it look good" is not an instruction. It is a wish. If the output does not match your vision, the prompt did not describe your vision.
 
 Do not prompt in bulk. "Build the entire checkout flow with cart, payment, confirmation, email receipt, and order history" will produce a tangled mess. Decompose into individual prompts.
 
@@ -94,7 +94,7 @@ Pick a feature you want to build (or use: a reading list with add/remove/mark-as
 :::
 
 :::resources{title="Go Deeper"}
-- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) — The official guide from the people who built Claude. Comprehensive and practical.
-- [Claude Code Best Practices](https://docs.anthropic.com/en/docs/claude-code/best-practices) — Specific tips for getting the best results from Claude Code.
-- [Prompt Engineering for Developers (DeepLearning.AI)](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) — Free short course on prompting fundamentals. Model-agnostic principles.
+- [Anthropic Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview): The official guide from the people who built Claude. Comprehensive and practical.
+- [Claude Code Best Practices](https://docs.anthropic.com/en/docs/claude-code/best-practices): Specific tips for getting the best results from Claude Code.
+- [Prompt Engineering for Developers (DeepLearning.AI)](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/): Free short course on prompting fundamentals. Model-agnostic principles.
 :::

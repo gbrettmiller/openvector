@@ -10,17 +10,17 @@ updatedAt: '2026-02-14'
 
 ## Why Planning Matters More with AI
 
-There is a paradox with AI coding tools: the faster you can build, the more important it is to plan. When building was slow, bad decisions were small — you would lose an afternoon. When an AI agent can generate an entire feature in minutes, a bad decision can produce hundreds of lines of code you do not understand, heading in a direction you did not choose.
+There is a paradox with AI coding tools: the faster you can build, the more important it is to plan. When building was slow, bad decisions were small; you would lose an afternoon. When an AI agent can generate an entire feature in minutes, a bad decision can produce hundreds of lines of code you do not understand, heading in a direction you did not choose.
 
 Planning is not about predicting the future. It is about defining the present clearly enough that your next action is obvious. What are you building? For whom? What does "done" look like? What do you build first?
 
 You do not need a project management tool for this. You need a piece of paper, 15 minutes, and the willingness to think before you move.
 
-> A plan is not a promise. It is a snapshot of your current understanding. The plan will change — that is fine. The act of making it forces clarity that no amount of improvisation can replace.
+> A plan is not a promise. It is a snapshot of your current understanding. The plan will change, and that is fine. The act of making it forces clarity that no amount of improvisation can replace.
 
 ## Start with the Problem
 
-Every project begins with a problem. Not a solution — a problem. "I want to build a website" is a solution. "My portfolio is not getting me interviews" is a problem. The problem tells you what success looks like. The solution is just one way to get there.
+Every project begins with a problem. Not a solution, but a problem. "I want to build a website" is a solution. "My portfolio is not getting me interviews" is a problem. The problem tells you what success looks like. The solution is just one way to get there.
 
 Write the problem down in one sentence. Be specific. "Users cannot find the information they need on our site" is better than "the site needs to be better." "I want to track my reading habits and see patterns over time" is better than "I want to build an app."
 
@@ -30,17 +30,17 @@ If you cannot articulate the problem in one sentence, you are not ready to build
 
 Before building anything, write down what "done" looks like. Not perfectly done. Not version 10 done. Version 1 done. The smallest version that solves the problem.
 
-For a portfolio site: "Done means five pages — home, about, three case studies — deployed on a custom domain, with responsive layout and working navigation."
+For a portfolio site: "Done means five pages (home, about, three case studies) deployed on a custom domain, with responsive layout and working navigation."
 
 For a reading tracker: "Done means I can add a book, mark it as reading/finished, and see a list of what I have read this year. No login, no social features, no recommendations."
 
-This is your scope. Everything inside the fence gets built. Everything outside it does not — not yet. The fence is not permanent. You can move it later. But you cannot make progress without knowing where you are going.
+This is your scope. Everything inside the fence gets built. Everything outside it does not, at least not yet. The fence is not permanent. You can move it later. But you cannot make progress without knowing where you are going.
 
 ## Decomposition
 
 Decomposition is breaking a large problem into smaller problems until each piece is small enough to build in one sitting.
 
-"Build a portfolio site" is not actionable — it is a project. But decompose it: set up the repo, build the layout shell, create the navigation, write the home page content, build the case study template, fill in case study 1, fill in case study 2, fill in case study 3, add responsive styles, deploy. Now you have ten tasks, each completable in 30-60 minutes.
+"Build a portfolio site" is not actionable; it is a project. But decompose it: set up the repo, build the layout shell, create the navigation, write the home page content, build the case study template, fill in case study 1, fill in case study 2, fill in case study 3, add responsive styles, deploy. Now you have ten tasks, each completable in 30-60 minutes.
 
 The technique is simple: keep asking "what does this require?" until the answer is something you can do right now. "Build the layout shell" requires what? A header component, a main content area, a footer. Can you build a header component right now? Yes. Start there.
 
@@ -74,7 +74,7 @@ Decomposition turns overwhelming projects into to-do lists. And to-do lists, unl
 
 When you are not sure where to start, work backwards from the end. Imagine the finished product. What is the last thing that needs to happen before it is done? What needs to happen before that? And before that?
 
-For deployment: the site needs to be deployed (last step). Before that, it needs to build without errors. Before that, all pages need to exist. Before that, the components need to be built. Before that, the project needs to be set up. Now reverse the list — that is your build order.
+For deployment: the site needs to be deployed (last step). Before that, it needs to build without errors. Before that, all pages need to exist. Before that, the components need to be built. Before that, the project needs to be set up. Now reverse the list. That is your build order.
 
 Working backwards is particularly useful when you are building something you have never built before. You may not know how to start, but you usually know what the end looks like.
 
@@ -107,8 +107,8 @@ Pick a project you actually want to build (or use the reading tracker from this 
 :::
 
 :::resources{title="Go Deeper"}
-- [Shape Up by Basecamp](https://basecamp.com/shapeup) — A free book on how to scope and plan projects. "Shaping" is professional decomposition. Brilliant and practical.
-- [The Mythical Man-Month (essays)](https://en.wikipedia.org/wiki/The_Mythical_Man-Month) — Classic software engineering wisdom. The chapter on conceptual integrity is about planning.
-- [Getting Real by Basecamp](https://basecamp.com/gettingreal) — A manifesto on building less and shipping faster. The chapter on scope is gold.
-- [CLAUDE.md: Writing Instructions for AI](https://docs.anthropic.com/en/docs/claude-code/tutorials#create-a-claude-md-file) — How to write a CLAUDE.md file — your plan for AI collaboration.
+- [Shape Up by Basecamp](https://basecamp.com/shapeup): A free book on how to scope and plan projects. "Shaping" is professional decomposition. Brilliant and practical.
+- [The Mythical Man-Month (essays)](https://en.wikipedia.org/wiki/The_Mythical_Man-Month): Classic software engineering wisdom. The chapter on conceptual integrity is about planning.
+- [Getting Real by Basecamp](https://basecamp.com/gettingreal): A manifesto on building less and shipping faster. The chapter on scope is gold.
+- [CLAUDE.md: Writing Instructions for AI](https://docs.anthropic.com/en/docs/claude-code/tutorials#create-a-claude-md-file): How to write a CLAUDE.md file, your plan for AI collaboration.
 :::

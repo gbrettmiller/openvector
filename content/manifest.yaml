@@ -1,5 +1,5 @@
 # ============================================
-# OPEN VECTOR — Content Manifest
+# OPEN VECTOR Content Manifest
 # ============================================
 #
 # This file defines the hierarchy and ordering of all learning content.
@@ -150,7 +150,7 @@ levels:
       - Teach Zero-Vector principles to your team or community
       - Contribute back to the open source movement
       - Build and lead a community of practice
-      - Practice as a Systems Auteur — one mind, complete vision
+      - Practice as a Systems Auteur, one mind, complete vision
     lessons:
       - personal-methodology
       - framework-design
@@ -162,7 +162,7 @@ levels:
 approach:
   title: The Approach
   subtitle: IKEA instructions for the Zero Vector workflow.
-  intro: The curriculum teaches you to think. The Approach shows you what to do. Step-by-step walkthroughs for every part of the design-led engineering workflow — from your first terminal session to coordinating a crew of AI agents.
+  intro: The curriculum teaches you to think. The Approach shows you what to do. Step-by-step walkthroughs for every part of the design-led engineering workflow, from your first terminal session to coordinating a crew of AI agents.
   categories:
     - key: getting-started
       label: Getting Started

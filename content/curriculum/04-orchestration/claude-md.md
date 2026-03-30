@@ -8,7 +8,7 @@ status: available
 
 ## The Instruction File
 
-A CLAUDE.md file is a plain text file that sits at the root of your project. When an AI agent like Claude Code opens your project, it reads this file first — before looking at any code. It is the briefing document. The mission parameters. The "read this before you do anything" note you leave for every agent that will ever touch your codebase.
+A CLAUDE.md file is a plain text file that sits at the root of your project. When an AI agent like Claude Code opens your project, it reads this file first, before looking at any code. It is the briefing document. The mission parameters. The "read this before you do anything" note you leave for every agent that will ever touch your codebase.
 
 Without a CLAUDE.md, every conversation with an AI agent starts from zero. You explain the project. You explain the conventions. You explain what not to touch. You answer the same questions session after session. A CLAUDE.md eliminates that repetition by encoding your project knowledge into a persistent document that the agent reads automatically.
 
@@ -65,11 +65,11 @@ src/
 
 ## Voice and Personality
 
-Here is where CLAUDE.md becomes powerful beyond simple configuration. You can define how the agent communicates. Not just what it builds — how it thinks and speaks.
+Here is where CLAUDE.md becomes powerful beyond simple configuration. You can define how the agent communicates. Not just what it builds, but how it thinks and speaks.
 
 This is not frivolous. If you are working with an agent for hours, its communication style affects your workflow. An agent that is terse when you need explanation, or verbose when you need action, creates friction. Defining the voice eliminates that friction.
 
-You can go further: give the agent a role. "You are the frontend specialist. You own the component library and the CSS system. You care about accessibility and performance." A role focuses the agent. It makes decisions through a lens. It has opinions. This is not roleplay — it is specialization.
+You can go further: give the agent a role. "You are the frontend specialist. You own the component library and the CSS system. You care about accessibility and performance." A role focuses the agent. It makes decisions through a lens. It has opinions. This is not roleplay; it is specialization.
 
 The Zero Vector crew model (which you will learn in the final lesson of this level) takes this to its logical conclusion: multiple agents, each with their own CLAUDE.md, each with a distinct role, working on the same codebase.
 
@@ -97,24 +97,24 @@ Too long. If your CLAUDE.md is 2,000 lines, the agent will lose focus on what ma
 
 Too restrictive. If every line is a "never" rule, the agent cannot do anything. Balance constraints with freedom. Tell it what to do, not just what to avoid.
 
-Outdated. A CLAUDE.md that describes the project as it was three months ago is worse than no CLAUDE.md at all. It creates confident wrongness — the agent follows outdated instructions precisely.
+Outdated. A CLAUDE.md that describes the project as it was three months ago is worse than no CLAUDE.md at all. It creates confident wrongness: the agent follows outdated instructions precisely.
 
-Missing the "why." Rules without reasons get broken. "Do not use CSS frameworks" is weaker than "Do not use CSS frameworks — we maintain a custom design system for brand consistency and performance." The agent understands the intent, not just the rule.
+Missing the "why." Rules without reasons get broken. "Do not use CSS frameworks" is weaker than "Do not use CSS frameworks, because we maintain a custom design system for brand consistency and performance." The agent understands the intent, not just the rule.
 
 ## The Full Context Stack: CLAUDE.md + VECTOR.md
 
 CLAUDE.md tells your agent how to behave in this project. But it does not tell your agent why the project exists. That is what VECTOR.md is for.
 
-Together, they form the full Zero Vector context stack. VECTOR.md is the project brief — the vision, the audience, the success criteria, the decisions that shaped the product. CLAUDE.md is the agent's job description — the conventions, the guardrails, the tone, the workflow rules. The brief tells the agent what you are building and why. The job description tells the agent how to build it and what to watch out for.
+Together, they form the full Zero Vector context stack. VECTOR.md is the project brief: the vision, the audience, the success criteria, the decisions that shaped the product. CLAUDE.md is the agent's job description: the conventions, the guardrails, the tone, the workflow rules. The brief tells the agent what you are building and why. The job description tells the agent how to build it and what to watch out for.
 
 This pairing is what separates Zero Vector from ad hoc prompting. Without VECTOR.md, your agent knows the rules but not the reasons. Without CLAUDE.md, your agent knows the vision but not the method. Both documents live at the root of your project, both are read automatically, and both should exist before the first line of code is written.
 
 :::exercise{title="Write Your First CLAUDE.md"}
-Create a CLAUDE.md for a project you are working on (or the practice project from earlier levels). Include: a two-sentence project description, the tech stack, three conventions you follow, a brief architecture map, and at least two rules. Keep it under 50 lines. Then open the project with Claude Code and ask it to describe the project back to you — if it gets it right, your CLAUDE.md works.
+Create a CLAUDE.md for a project you are working on (or the practice project from earlier levels). Include: a two-sentence project description, the tech stack, three conventions you follow, a brief architecture map, and at least two rules. Keep it under 50 lines. Then open the project with Claude Code and ask it to describe the project back to you. If it gets it right, your CLAUDE.md works.
 :::
 
 :::resources{title="Go Deeper"}
-- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code) — Official docs on CLAUDE.md files and how Claude Code reads project instructions.
-- [Anthropic Cookbook — CLAUDE.md Examples](https://github.com/anthropics/anthropic-cookbook) — Real-world examples of instruction files for various project types.
-- [The Twelve-Factor App](https://12factor.net/) — Not about AI, but the same principle: encode configuration so every environment gets the right setup automatically.
+- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code). Official docs on CLAUDE.md files and how Claude Code reads project instructions.
+- [Anthropic Cookbook: CLAUDE.md Examples](https://github.com/anthropics/anthropic-cookbook). Real-world examples of instruction files for various project types.
+- [The Twelve-Factor App](https://12factor.net/). Not about AI, but the same principle: encode configuration so every environment gets the right setup automatically.
 :::

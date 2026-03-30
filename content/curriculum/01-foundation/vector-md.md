@@ -137,7 +137,7 @@ Go to the Investiture scaffold repository at github.com/erikaflowers/investiture
 :::
 
 :::resources{title="Links"}
-- [Investiture Scaffold Repository](https://github.com/erikaflowers/investiture) — A real VECTOR.md in a real project.
-- [Investiture Framework](https://zerovector.design/investiture) — The Investiture framework page on Zero Vector.
-- [Zero Vector Substack](https://eflowers.substack.com) — Articles on the methodology.
+- [Investiture Scaffold Repository](https://github.com/erikaflowers/investiture): A real VECTOR.md in a real project.
+- [Investiture Framework](https://zerovector.design/investiture): The Investiture framework page on Zero Vector.
+- [Zero Vector Substack](https://eflowers.substack.com): Articles on the methodology.
 :::

@@ -103,7 +103,7 @@ Fenced code blocks render in a dark monospace container. The language tag (e.g. 
 > Claude Code does not replace thinking. It replaces typing.
 ```
 
-Blockquotes render as **callout boxes** — blue accent border, subtle background. Use them for key takeaways, principles, or important notes. One callout per concept.
+Blockquotes render as **callout boxes** with a blue accent border and subtle background. Use them for key takeaways, principles, or important notes. One callout per concept.
 
 ### Links
 
@@ -146,7 +146,7 @@ Open your terminal. Run `pwd` to see where you are. Run `mkdir test` to create a
 ```
 
 **Attributes:**
-- `title` (optional) — Exercise name displayed as a subheading.
+- `title` (optional): Exercise name displayed as a subheading.
 
 **Renders as:** Green-bordered box with "Exercise" label.
 
@@ -161,7 +161,7 @@ Create a simple personal homepage with my name, a short bio, and three links to 
 ```
 
 **Attributes:**
-- `title` (optional) — Template name displayed in the header.
+- `title` (optional): Template name displayed in the header.
 
 **Renders as:** Labeled box with "Template" tag, styled for copying.
 
@@ -178,8 +178,8 @@ You should see a dark window with a blinking cursor.
 ```
 
 **Attributes:**
-- `number` (required) — Step number displayed in the circular badge (e.g. `"01"`, `"02"`).
-- `title` (optional) — Step heading. Added to the Table of Contents.
+- `number` (required): Step number displayed in the circular badge (e.g. `"01"`, `"02"`).
+- `title` (optional): Step heading. Added to the Table of Contents.
 
 **Renders as:** Numbered circle + title + body paragraphs. Used in Approach guides for IKEA-style walkthroughs.
 
@@ -196,9 +196,9 @@ A list of external links with descriptions.
 ```
 
 **Attributes:**
-- `title` (optional) — Section heading (e.g. "Go Deeper", "Links"). Added to the Table of Contents.
+- `title` (optional): Section heading (e.g. "Go Deeper", "Links"). Added to the Table of Contents.
 
-**Format:** Each item is a markdown list item with a link followed by ` — ` and a description. The link text becomes the resource title, the URL becomes the link, and everything after the dash becomes the note.
+**Format:** Each item is a markdown list item with a link followed by a period and a description. The link text becomes the resource title, the URL becomes the link, and everything after the period becomes the note.
 
 **Renders as:** Blue-accented box with a heading and a styled link list. All links open in a new tab.
 
@@ -288,7 +288,7 @@ The `rm` command permanently deletes files. There is no Trash and no undo.
 
 ## The Manifest
 
-`manifest.yaml` controls what appears on the site and in what order. Lesson metadata (title, duration, etc.) lives in each `.md` file's frontmatter — the manifest only controls **hierarchy and ordering**.
+`manifest.yaml` controls what appears on the site and in what order. Lesson metadata (title, duration, etc.) lives in each `.md` file's frontmatter; the manifest only controls **hierarchy and ordering**.
 
 ### Adding a Lesson
 

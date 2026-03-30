@@ -10,7 +10,7 @@ status: available
 
 Most people use AI agents as assistants. They ask a question, get an answer, move on. The agent has no memory between sessions, no persistent identity, no area of ownership. Every conversation starts from scratch.
 
-The crew model is different. Each agent has a name, a role, a domain, and a persistent briefing (CLAUDE.md). They are not interchangeable helpers — they are specialists with continuity. When you open a session with your frontend agent, it already knows the project, the conventions, and its responsibilities. It picks up where it left off.
+The crew model is different. Each agent has a name, a role, a domain, and a persistent briefing (CLAUDE.md). They are not interchangeable helpers; they are specialists with continuity. When you open a session with your frontend agent, it already knows the project, the conventions, and its responsibilities. It picks up where it left off.
 
 This is the difference between hiring a random contractor every day and having a team. The contractor needs a full briefing every morning. The team member walks in, checks the board, and starts working.
 
@@ -20,13 +20,13 @@ This is the difference between hiring a random contractor every day and having a
 
 Every crew member has five elements:
 
-Name and identity. Not for fun — for clarity. When you say "Heavy handles the frontend," everyone (including you, six months from now) knows what that means. Names make agent architectures readable.
+Name and identity. Not for fun, but for clarity. When you say "Heavy handles the frontend," everyone (including you, six months from now) knows what that means. Names make agent architectures readable.
 
 Role description. What does this agent do? "Frontend specialist: owns components, styling, accessibility, and client-side performance." The role is the lens through which the agent makes decisions.
 
 Domain boundaries. What files and systems does this agent own? "Everything in src/components/ and src/styles/. Does not modify API code or database schemas." Boundaries prevent conflicts.
 
-Communication style. How does this agent talk? Some agents should be terse and technical. Others should be explanatory and thorough. The style should match the domain — a code reviewer should be direct, a documentation writer should be clear.
+Communication style. How does this agent talk? Some agents should be terse and technical. Others should be explanatory and thorough. The style should match the domain: a code reviewer should be direct, a documentation writer should be clear.
 
 Coordination rules. How does this agent interact with others? "Check STATUS.md before starting work. Commit with descriptive messages. Flag breaking changes in the commit message."
 
@@ -34,9 +34,9 @@ Coordination rules. How does this agent interact with others? "Check STATUS.md b
 
 Start from the work, not from the agents. What are the major domains in your project? A typical web application has: frontend (UI, components, styling), backend (API, database, business logic), infrastructure (deployment, CI/CD, configuration), and quality (testing, code review, documentation).
 
-Each domain is a potential crew member. You do not need all of them immediately. Start with the split that gives you the most benefit — usually the one where you find yourself switching context the most.
+Each domain is a potential crew member. You do not need all of them immediately. Start with the split that gives you the most benefit, usually the one where you find yourself switching context the most.
 
-For a solo builder, a practical starting crew is three agents: a builder (writes features), a reviewer (critiques code), and a planner (designs approaches before building). This trio covers the three modes of work — creation, evaluation, and strategy — that are hardest for one mind to do simultaneously.
+For a solo builder, a practical starting crew is three agents: a builder (writes features), a reviewer (critiques code), and a planner (designs approaches before building). This trio covers the three modes of work (creation, evaluation, and strategy) that are hardest for one mind to do simultaneously.
 
 ```
 # Example: Three-Agent Crew
@@ -69,9 +69,9 @@ In a crew model, you are not the developer. You are the director. Your job shift
 
 This is a profound shift in how you work. Instead of thinking "how do I implement this feature," you think "which agent should implement this feature, and what do they need to succeed?" Instead of debugging code, you review code. Instead of writing prompts, you write briefs.
 
-The director role requires different skills than hands-on building: prioritization, delegation, quality assessment, and integration thinking. These are leadership skills. You are learning to lead a team — the fact that the team is made of AI agents does not change the nature of the skill.
+The director role requires different skills than hands-on building: prioritization, delegation, quality assessment, and integration thinking. These are leadership skills. You are learning to lead a team, and the fact that the team is made of AI agents does not change the nature of the skill.
 
-Some people resist this shift. They want to write the code themselves, and the agents are just helpers. That is fine for small projects. But for ambitious work — the kind that used to require a team of ten — the crew model is how one person scales.
+Some people resist this shift. They want to write the code themselves, and the agents are just helpers. That is fine for small projects. But for ambitious work, the kind that used to require a team of ten, the crew model is how one person scales.
 
 ## Crew Communication
 
@@ -79,9 +79,9 @@ Crew members do not talk to each other directly. You are the routing layer. Agen
 
 The communication artifacts are: commit messages (what was done and why), status documents (what is in progress, what is blocked), decision records (what was decided and the rationale), and contracts (agreed interfaces between systems).
 
-A practical daily flow: check the status document. Decide the priority. Brief the appropriate agent. Review the output. Update the status. Brief the next agent. This is project management — compressed into a workflow one person can execute.
+A practical daily flow: check the status document. Decide the priority. Brief the appropriate agent. Review the output. Update the status. Brief the next agent. This is project management, compressed into a workflow one person can execute.
 
-The status document does not need to be complex. A simple text file with three sections — Done, In Progress, Next — updated after each work block, is enough to maintain coherence across sessions and agents.
+The status document does not need to be complex. A simple text file with three sections (Done, In Progress, Next) updated after each work block, is enough to maintain coherence across sessions and agents.
 
 ## Scaling the Crew
 
@@ -108,11 +108,11 @@ You brief the builder again with the reviewer's findings: "Fix these three issue
 Total wall clock time: maybe 45 minutes. The quality is higher than if one agent had done everything because each step was focused and verified.
 
 :::exercise{title="Design Your Crew"}
-Write the CLAUDE.md for a three-agent crew for a project you care about. Define each agent's name, role, domain (specific files and directories), communication style, and coordination rules. Be specific — "owns the frontend" is too vague. "Owns src/components/, src/hooks/, and src/styles/. Does not modify files in api/ or scripts/" is clear. Then run one work session using at least two of the three agents on a real task. Notice how the separation changes the quality of the output.
+Write the CLAUDE.md for a three-agent crew for a project you care about. Define each agent's name, role, domain (specific files and directories), communication style, and coordination rules. Be specific. "Owns the frontend" is too vague. "Owns src/components/, src/hooks/, and src/styles/. Does not modify files in api/ or scripts/" is clear. Then run one work session using at least two of the three agents on a real task. Notice how the separation changes the quality of the output.
 :::
 
 :::resources{title="Go Deeper"}
-- [Team Topologies by Skelton & Pais](https://teamtopologies.com/) — The best book on team structure and interaction patterns. Directly applicable to designing agent crews.
-- [The Manager's Path by Camille Fournier](https://www.oreilly.com/library/view/the-managers-path/9781491973882/) — On transitioning from individual contributor to technical leader. The same shift happens when you move from solo coding to directing a crew.
-- [Anthropic Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code) — Official documentation on project files, context management, and multi-session workflows.
+- [Team Topologies by Skelton & Pais](https://teamtopologies.com/). The best book on team structure and interaction patterns. Directly applicable to designing agent crews.
+- [The Manager's Path by Camille Fournier](https://www.oreilly.com/library/view/the-managers-path/9781491973882/). On transitioning from individual contributor to technical leader. The same shift happens when you move from solo coding to directing a crew.
+- [Anthropic Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code). Official documentation on project files, context management, and multi-session workflows.
 :::

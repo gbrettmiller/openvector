@@ -8,11 +8,11 @@ status: available
 
 ## Why React?
 
-React is a JavaScript library for building user interfaces. It is not the only option — Vue, Svelte, and Angular exist — but it is the most widely used, the most documented, and the one your AI agent is best at helping you with.
+React is a JavaScript library for building user interfaces. It is not the only option (Vue, Svelte, and Angular exist) but it is the most widely used, the most documented, and the one your AI agent is best at helping you with.
 
 We are not going to make you a React developer in one lesson. That takes practice. We are going to give you enough understanding to read React code, direct an AI agent writing React code, and know what is happening in your project. That is the Zero Vector approach: enough knowledge to wield the tool with intention.
 
-React was created by Facebook in 2013 to solve a specific problem: building complex UIs that update efficiently when data changes. Its big idea — components — has become the dominant way to think about building interfaces.
+React was created by Facebook in 2013 to solve a specific problem: building complex UIs that update efficiently when data changes. Its big idea, components, has become the dominant way to think about building interfaces.
 
 > You do not need to memorize React syntax. You need to understand the concepts: components, props, state, and rendering. The AI writes the syntax. You direct the architecture.
 
@@ -49,7 +49,7 @@ function ProfileCard({ user }) {
 
 Props (short for properties) are how you pass data from a parent component to a child component. They flow in one direction: down. A parent decides what data a child receives, and the child renders it.
 
-In the code above, name="Sarah" is a prop. The Greeting component receives it and uses it to display the greeting. The component does not know where "Sarah" came from — it just knows it received a name and displays it.
+In the code above, name="Sarah" is a prop. The Greeting component receives it and uses it to display the greeting. The component does not know where "Sarah" came from. It just knows it received a name and displays it.
 
 Props make components reusable. The same Greeting component works for any name. The same Card component works for any content. You define the shape of the component once and use it with different data everywhere.
 
@@ -63,7 +63,7 @@ Is a dropdown open or closed? That is state. What has the user typed in the sear
 
 In React, you manage state with the useState hook. It gives you two things: the current value and a function to update it. When you update state, React automatically re-renders the component to reflect the new value.
 
-The core insight: in React, the UI is a function of state. Change the state, and the UI updates automatically. You never manually change what is on screen — you change the data, and React handles the rest.
+The core insight: in React, the UI is a function of state. Change the state, and the UI updates automatically. You never manually change what is on screen. You change the data, and React handles the rest.
 
 ```
 // State example: a counter
@@ -91,11 +91,11 @@ function Counter() {
 
 ## JSX: HTML in JavaScript
 
-The code inside React components looks like HTML but it is actually JSX — a syntax extension that lets you write UI structure inside JavaScript. It gets compiled to regular JavaScript before the browser sees it.
+The code inside React components looks like HTML but it is actually JSX, a syntax extension that lets you write UI structure inside JavaScript. It gets compiled to regular JavaScript before the browser sees it.
 
 The differences from HTML are small but important: className instead of class (because class is a reserved word in JavaScript), style takes an object instead of a string, and you can embed JavaScript expressions inside curly braces.
 
-JSX is the reason React feels intuitive for designers. If you can read HTML, you can read JSX. The structure is the same — just with JavaScript superpowers embedded in it.
+JSX is the reason React feels intuitive for designers. If you can read HTML, you can read JSX. The structure is the same, just with JavaScript superpowers embedded in it.
 
 ```
 // JSX looks like HTML with JavaScript embedded:
@@ -125,7 +125,7 @@ In a React project, each component typically lives in its own file. The file exp
 
 A typical structure: src/components/ for reusable components, src/pages/ for page-level components (one per route), src/styles/ for CSS, src/content/ for data. You have seen this structure in the Open Vector codebase.
 
-The App.jsx file is the root component — everything else is nested inside it. The router (React Router) decides which page component to show based on the URL. Layout components (headers, sidebars) wrap the page content.
+The App.jsx file is the root component, and everything else is nested inside it. The router (React Router) decides which page component to show based on the URL. Layout components (headers, sidebars) wrap the page content.
 
 You do not need to set this up from scratch. When you create a project with Vite (npm create vite@latest), the basic structure is already there. Claude Code understands it and works within it.
 
@@ -148,8 +148,8 @@ Open the Open Vector codebase (or any React project) and pick a component file. 
 :::
 
 :::resources{title="Go Deeper"}
-- [React Official Tutorial](https://react.dev/learn) — The best introduction to React, written by the React team. Start with "Quick Start."
-- [Thinking in React](https://react.dev/learn/thinking-in-react) — The most important page in the React docs. How to decompose a UI into components.
-- [React for Designers (video)](https://www.youtube.com/results?search_query=react+for+designers+tutorial) — Search for beginner React tutorials aimed at designers. Many excellent free options.
-- [Vite Getting Started](https://vite.dev/guide/) — How to create and run a React project with Vite. The modern way to start.
+- [React Official Tutorial](https://react.dev/learn): The best introduction to React, written by the React team. Start with "Quick Start."
+- [Thinking in React](https://react.dev/learn/thinking-in-react): The most important page in the React docs. How to decompose a UI into components.
+- [React for Designers (video)](https://www.youtube.com/results?search_query=react+for+designers+tutorial): Search for beginner React tutorials aimed at designers. Many excellent free options.
+- [Vite Getting Started](https://vite.dev/guide/): How to create and run a React project with Vite. The modern way to start.
 :::
