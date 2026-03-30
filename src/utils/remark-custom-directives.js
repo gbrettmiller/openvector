@@ -62,7 +62,19 @@ export function remarkCustomDirectives() {
           resources: 'resources',
         };
 
-        const hName = nameMap[node.name] || node.name;
+        // Only process directives we explicitly support.
+        // Unknown directives (e.g. `:3000` from `localhost:3000`) get
+        // converted back to plain text so they don't create invalid HTML elements.
+        if (!nameMap[node.name]) {
+          if (node.type === 'textDirective') {
+            node.type = 'text';
+            node.value = ':' + node.name;
+            delete node.children;
+          }
+          return;
+        }
+
+        const hName = nameMap[node.name];
         data.hName = hName;
         data.hProperties = { ...(node.attributes || {}) };
 
