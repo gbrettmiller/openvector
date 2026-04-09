@@ -106,7 +106,8 @@ If you have a project with a `package.json` and a build command, deploy it to Ne
 - Run `npm create vite@latest my-site -- --template vanilla`
 - `cd my-site` and run `npm install`
 - Initialize a repo: `git init && git add . && git commit -m "Initial commit"`
-- Create a new repository on GitHub and push to it
+- Go to [github.com/new](https://github.com/new) and create a new repository (give it any name, leave everything else as default — do not initialize with a README)
+- GitHub will show you setup instructions — copy the two lines under "push an existing repository from the command line" and run them in your terminal
 - Follow the "Your First Deploy" steps above to connect the repo to Netlify
 
 The goal is not a polished product. It is experiencing the act of going from local to live. Get something on the internet. You can always improve it later.
