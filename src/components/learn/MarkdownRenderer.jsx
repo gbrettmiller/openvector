@@ -38,17 +38,6 @@ function PrereqBlock({ children, title }) {
   );
 }
 
-/** Custom component: Extra Credit block */
-function ExtraCreditBlock({ children, title }) {
-  return (
-    <div className="ovl-block ovl-block-extracredit">
-      <div className="ovl-extracredit-label">Extra Credit</div>
-      {title && <h3 className="ovl-extracredit-title">{title}</h3>}
-      <div className="ovl-extracredit-body">{children}</div>
-    </div>
-  );
-}
-
 /** Custom component: Exercise block */
 function ExerciseBlock({ children, title }) {
   return (
@@ -130,7 +119,6 @@ const components = {
 
   // Custom directive components
   prereq: PrereqBlock,
-  extracredit: ExtraCreditBlock,
   exercise: ExerciseBlock,
   'template-block': TemplateBlock,
   step: StepBlock,
