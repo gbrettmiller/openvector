@@ -113,16 +113,6 @@ If you have a project with a `package.json` and a build command, deploy it to Ne
 The goal is not a polished product. It is experiencing the act of going from local to live. Get something on the internet. You can always improve it later.
 :::
 
-:::extracredit{title="Custom Domains"}
-The auto-generated URL (`your-project.netlify.app`) works, but for real projects you want your own domain. The process is straightforward:
-
-- Buy a domain from a registrar (Namecheap, Cloudflare, Google Domains).
-- In Netlify, go to Site settings → Domain management → Add custom domain.
-- Netlify tells you what DNS records to set (we cover DNS in the next lesson).
-- Set those records at your registrar. Wait for propagation.
-- Netlify automatically provisions an SSL certificate (HTTPS). Your site is live on your domain, with encryption, for free.
-:::
-
 :::resources{title="Go Deeper"}
 - [Netlify Docs: Get Started](https://docs.netlify.com/get-started/). Step-by-step guide to deploying your first site on Netlify.
 - [Vercel Docs: Deployments](https://vercel.com/docs/deployments/overview). Vercel's deployment concepts explained clearly.
