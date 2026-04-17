@@ -210,5 +210,5 @@ Intentionally introduce a bug into your project: rename a data field in one file
 - [Systems Thinking (Curriculum)](/learn/curriculum/01-foundation/systems-thinking): Understanding how parts of a system interact, which is really what debugging is about.
 - [Claude Code (Curriculum)](/learn/curriculum/02-the-medium/claude-code): Getting the most out of Claude Code, including debugging workflows.
 - [Chrome DevTools Documentation](https://developer.chrome.com/docs/devtools/): The official guide to Chrome's debugging tools (Console, Network, Elements, and more).
-- [Managing Revision History (Approach)](/learn/approach/revision-history): The git workflow that gives you safe revert points when debugging gets tough.
+- [Managing Revision History (Approach)](/learn/approach/build-workflow/revision-history): The git workflow that gives you safe revert points when debugging gets tough.
 :::

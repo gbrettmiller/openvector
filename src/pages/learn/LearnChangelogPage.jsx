@@ -41,7 +41,7 @@ function LearnChangelogPage() {
           subtitle: guide.subtitle,
           date: guide.updatedAt,
           levelTitle: 'Approach',
-          path: `/learn/approach/${guide.slug}`,
+          path: `/learn/approach/${guide.category}/${guide.slug}`,
         });
       }
     });

@@ -48,7 +48,7 @@ function buildIndex() {
       headings,
       body,
       level: 'Approach',
-      path: `/learn/approach/${guide.slug}`,
+      path: `/learn/approach/${guide.category}/${guide.slug}`,
       duration: guide.duration,
     });
   });

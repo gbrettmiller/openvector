@@ -182,7 +182,7 @@ Pick a feature from your project plan, something you can build in one session. F
 :::resources{title="Go Deeper"}
 - [Architecture (Curriculum)](/learn/curriculum/01-foundation/architecture): Understanding the structure of applications, what components are and how they fit together.
 - [Claude Code (Curriculum)](/learn/curriculum/02-the-medium/claude-code): How to work with Claude Code effectively as your build tool.
-- [Giving Effective Instructions (Approach)](/learn/approach/effective-instructions): How to write the clear, specific instructions that produce the best results.
-- [Managing Revision History (Approach)](/learn/approach/revision-history): The git workflow that keeps you safe when AI is writing code.
+- [Giving Effective Instructions (Approach)](/learn/approach/working-with-agents/effective-instructions): How to write the clear, specific instructions that produce the best results.
+- [Managing Revision History (Approach)](/learn/approach/build-workflow/revision-history): The git workflow that keeps you safe when AI is writing code.
 - [Testing (Curriculum)](/learn/curriculum/03-the-pipeline/testing): How to test what you build, not just "does it load" but "does it work."
 :::

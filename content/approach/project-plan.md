@@ -151,6 +151,6 @@ Take your PRD and use cases and create a project plan with at least three phases
 :::resources{title="Go Deeper"}
 - [Planning (Curriculum)](/learn/curriculum/01-foundation/planning): The foundational lesson on scoping and shaping work.
 - [Systems Thinking (Curriculum)](/learn/curriculum/01-foundation/systems-thinking): How to see the interconnected structure of what you are building.
-- [Building Use Cases (Approach)](/learn/approach/building-use-cases): How to create the use cases that feed into your project plan.
+- [Building Use Cases (Approach)](/learn/approach/planning/building-use-cases): How to create the use cases that feed into your project plan.
 - [Shape Up, Basecamp](https://basecamp.com/shapeup): A methodology for shaping, scoping, and shipping work in cycles.
 :::

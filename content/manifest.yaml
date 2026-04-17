@@ -165,14 +165,27 @@ approach:
   intro: The curriculum teaches you to think. The Approach shows you what to do. Step-by-step walkthroughs for every part of the design-led engineering workflow, from your first terminal session to coordinating a crew of AI agents.
   categories:
     - key: getting-started
+      number: A1
       label: Getting Started
+      subtitle: Day one. Stock machine to productive in a single sitting.
+      desc: Your first working session with an AI coding partner. Open the terminal, clone a repo, start an agent, and scaffold a real project. This is where the friction drops away. The rest of the Approach assumes you have been through it once.
     - key: planning
+      number: A2
       label: Planning
+      subtitle: Before the first line of code. The artifacts that make AI usable.
+      desc: A PRD, a use case, a project plan. The documents you write before you build turn vague intent into something an AI can actually execute against. Skip this step and every agent conversation becomes a negotiation with your own half-formed ideas.
     - key: working-with-agents
+      number: A3
       label: Working with Agents
+      subtitle: The conversation layer. Instruction, correction, coordination.
+      desc: How to talk to one agent so it ships what you actually want. How to run several agents without losing the thread. The difference between a one-shot tool and a crew is entirely in how you direct it.
     - key: build-workflow
+      number: A4
       label: The Build Workflow
+      subtitle: The daily loop. Scaffold, iterate, commit, debug.
+      desc: The muscle memory of shipping with an AI partner. Adding features to a live project, keeping a clean revision history, debugging when something goes sideways. This is the rhythm you settle into once the first session is behind you.
   guides:
+    - this-is-not-vibe-coding
     - first-session
     - scaffold-project
     - writing-a-prd

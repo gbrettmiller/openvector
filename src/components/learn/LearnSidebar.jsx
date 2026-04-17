@@ -6,7 +6,7 @@ import { topicFilters } from '../../content/learn/resources';
 // (approach?.categories || []) now comes from the approach prop (approach.categories)
 import { SUGGESTED_PROMPTS } from '../../pages/learn/LearnChatPage';
 
-function LearnSidebar({ levels, activeLevelSlug, activeLessonSlug, approach, activeGuideSlug, open, onClose }) {
+function LearnSidebar({ levels, activeLevelSlug, activeLessonSlug, approach, activeCategorySlug, activeGuideSlug, open, onClose }) {
   const { isComplete, enabled } = useProgress();
   const { pathname } = useLocation();
   const isApproach = pathname.includes('/approach') && pathname.includes('/learn');
@@ -101,31 +101,39 @@ function LearnSidebar({ levels, activeLevelSlug, activeLessonSlug, approach, act
               {(approach?.categories || []).map(cat => {
                 const guides = (approach?.guides || []).filter(g => g.category === cat.key);
                 if (guides.length === 0) return null;
-                const hasActiveGuide = guides.some(g => g.slug === activeGuideSlug);
+                const isActiveCategory = cat.key === activeCategorySlug;
                 return (
                   <div
                     key={cat.key}
-                    className={`ovl-sidebar-level ${hasActiveGuide ? 'ovl-sidebar-level--active' : ''}`}
+                    className={`ovl-sidebar-level ${isActiveCategory ? 'ovl-sidebar-level--active' : ''}`}
+                    data-level={cat.number}
                   >
-                    <div className="ovl-sidebar-level-header">
+                    <Link
+                      to={`/learn/approach/${cat.key}`}
+                      className="ovl-sidebar-level-header"
+                      onClick={onClose}
+                    >
+                      <span className="ovl-sidebar-level-number">{cat.number}</span>
                       <span className="ovl-sidebar-level-title">{cat.label}</span>
-                    </div>
-                    <div className="ovl-sidebar-lessons">
-                      {guides.map(guide => (
-                        <Link
-                          key={guide.slug}
-                          to={`/learn/approach/${guide.slug}`}
-                          className={`ovl-sidebar-lesson ${guide.slug === activeGuideSlug ? 'ovl-sidebar-lesson--active' : ''}`}
-                          onClick={onClose}
-                        >
-                          {enabled && isComplete('approach', guide.slug) && (
-                            <span className="ovl-sidebar-check">&check;</span>
-                          )}
-                          <span className="ovl-sidebar-lesson-label">{guide.title}</span>
-                          <LessonBadge badge={guide.badge} />
-                        </Link>
-                      ))}
-                    </div>
+                    </Link>
+                    {isActiveCategory && (
+                      <div className="ovl-sidebar-lessons">
+                        {guides.map(guide => (
+                          <Link
+                            key={guide.slug}
+                            to={`/learn/approach/${cat.key}/${guide.slug}`}
+                            className={`ovl-sidebar-lesson ${guide.slug === activeGuideSlug ? 'ovl-sidebar-lesson--active' : ''}`}
+                            onClick={onClose}
+                          >
+                            {enabled && isComplete('approach', guide.slug) && (
+                              <span className="ovl-sidebar-check">&check;</span>
+                            )}
+                            <span className="ovl-sidebar-lesson-label">{guide.title}</span>
+                            <LessonBadge badge={guide.badge} />
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 );
               })}

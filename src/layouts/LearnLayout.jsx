@@ -13,7 +13,7 @@ import '../styles/site.css';
 import learn from 'virtual:learn-content';
 
 function LearnLayout() {
-  const { levelSlug, lessonSlug, guideSlug } = useParams();
+  const { levelSlug, lessonSlug, categorySlug, guideSlug } = useParams();
   const { pathname } = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -71,13 +71,22 @@ function LearnLayout() {
     l => l.levelSlug === levelSlug && l.lessonSlug === lessonSlug
   );
 
-  // Flat guide list for approach pagination
+  // Flat guide list for approach pagination (ordered by category)
   const flatGuides = useMemo(() => {
-    return (learn.approach?.guides || []).map(guide => ({
-      guideSlug: guide.slug,
-      lessonTitle: guide.title,
-      path: `/learn/approach/${guide.slug}`,
-    }));
+    const list = [];
+    (learn.approach?.categories || []).forEach(cat => {
+      (learn.approach?.guides || [])
+        .filter(g => g.category === cat.key)
+        .forEach(guide => {
+          list.push({
+            categorySlug: cat.key,
+            guideSlug: guide.slug,
+            lessonTitle: guide.title,
+            path: `/learn/approach/${cat.key}/${guide.slug}`,
+          });
+        });
+    });
+    return list;
   }, []);
 
   const currentGuideIndex = flatGuides.findIndex(
@@ -99,6 +108,7 @@ function LearnLayout() {
           activeLevelSlug={levelSlug}
           activeLessonSlug={lessonSlug}
           approach={learn.approach}
+          activeCategorySlug={categorySlug}
           activeGuideSlug={guideSlug}
           open={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
@@ -109,11 +119,12 @@ function LearnLayout() {
             levelSlug={levelSlug}
             lessonSlug={lessonSlug}
             levels={learn.levels}
+            categorySlug={categorySlug}
             guideSlug={guideSlug}
             approach={learn.approach}
           />
           <ErrorBoundary>
-            <Outlet context={{ learn, levelSlug, lessonSlug, guideSlug }} />
+            <Outlet context={{ learn, levelSlug, lessonSlug, categorySlug, guideSlug }} />
           </ErrorBoundary>
           {lessonSlug && (
             <LearnPagination

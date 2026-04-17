@@ -103,7 +103,13 @@ export default function learnContentPlugin() {
       title: manifest.approach.title,
       subtitle: manifest.approach.subtitle,
       intro: manifest.approach.intro,
-      categories: manifest.approach.categories || [],
+      categories: (manifest.approach.categories || []).map(cat => ({
+        key: cat.key,
+        number: cat.number || '',
+        label: cat.label,
+        subtitle: cat.subtitle || '',
+        desc: cat.desc || '',
+      })),
       guides,
     };
 

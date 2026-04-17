@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 
-function LearnBreadcrumbs({ levelSlug, lessonSlug, levels, guideSlug, approach }) {
+function LearnBreadcrumbs({ levelSlug, lessonSlug, levels, categorySlug, guideSlug, approach }) {
   const { pathname } = useLocation();
   const isCurriculum = pathname.includes('/curriculum');
   const isResources = pathname.includes('/resources');
@@ -14,6 +14,9 @@ function LearnBreadcrumbs({ levelSlug, lessonSlug, levels, guideSlug, approach }
 
   const level = levels.find(l => l.slug === levelSlug);
   const lesson = level?.lessons.find(l => l.slug === lessonSlug);
+  const category = isApproach && categorySlug
+    ? (approach?.categories || []).find(c => c.key === categorySlug)
+    : null;
   const guide = isApproach && guideSlug ? approach?.guides?.find(g => g.slug === guideSlug) : null;
 
   // Hub page and chat — no breadcrumbs
@@ -78,10 +81,24 @@ function LearnBreadcrumbs({ levelSlug, lessonSlug, levels, guideSlug, approach }
       {isApproach && (
         <>
           <span className="ovl-crumb-sep">/</span>
-          {guide ? (
+          {category ? (
             <Link to="/learn/approach" className="ovl-crumb">Approach</Link>
           ) : (
             <span className="ovl-crumb ovl-crumb--current">Approach</span>
+          )}
+        </>
+      )}
+      {category && (
+        <>
+          <span className="ovl-crumb-sep">/</span>
+          {guide ? (
+            <Link to={`/learn/approach/${category.key}`} className="ovl-crumb">
+              {category.number} {category.label}
+            </Link>
+          ) : (
+            <span className="ovl-crumb ovl-crumb--current">
+              {category.number} {category.label}
+            </span>
           )}
         </>
       )}

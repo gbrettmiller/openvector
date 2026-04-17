@@ -154,6 +154,6 @@ Take one feature from your PRD and write a complete use case for it. Include at 
 :::resources{title="Go Deeper"}
 - [JTBD (Curriculum)](/learn/curriculum/03-the-pipeline/jtbd): Jobs to Be Done, the framework for understanding what users actually need, which feeds directly into use cases.
 - [Planning (Curriculum)](/learn/curriculum/01-foundation/planning): How to scope and shape work before building.
-- [Writing a PRD (Approach)](/learn/approach/writing-a-prd): The guide that comes before this one. Your PRD feeds your use cases.
+- [Writing a PRD (Approach)](/learn/approach/planning/writing-a-prd): The guide that comes before this one. Your PRD feeds your use cases.
 - [Alistair Cockburn, Writing Effective Use Cases](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258): The definitive book on use case writing, if you want to go deep.
 :::

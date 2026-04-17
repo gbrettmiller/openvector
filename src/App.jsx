@@ -15,6 +15,7 @@ import LearnProgressPage from './pages/learn/LearnProgressPage';
 import LearnGlossaryPage from './pages/learn/LearnGlossaryPage';
 import LearnEnterprisePage from './pages/learn/LearnEnterprisePage';
 import ApproachIndexPage from './pages/learn/ApproachIndexPage';
+import ApproachCategoryPage from './pages/learn/ApproachCategoryPage';
 import GuidePage from './pages/learn/GuidePage';
 import LearnWorkflowsPage from './pages/learn/LearnWorkflowsPage';
 
@@ -28,7 +29,8 @@ function App() {
         <Route path="curriculum/:levelSlug" element={<LevelPage />} />
         <Route path="curriculum/:levelSlug/:lessonSlug" element={<LessonPage />} />
         <Route path="approach" element={<ApproachIndexPage />} />
-        <Route path="approach/:guideSlug" element={<GuidePage />} />
+        <Route path="approach/:categorySlug" element={<ApproachCategoryPage />} />
+        <Route path="approach/:categorySlug/:guideSlug" element={<GuidePage />} />
         <Route path="workflows" element={<LearnWorkflowsPage />} />
         <Route path="resources" element={<LearnResourcesPage />} />
         <Route path="chat" element={<LearnChatPage />} />

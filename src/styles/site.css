@@ -2,6 +2,78 @@
    Zero-Vector Design — Site Styles
    ======================================== */
 
+/* --- Proxima Nova (self-hosted OTF) --- */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/proxima-nova/ProximaNova-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/proxima-nova/ProximaNova-LightIt.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/proxima-nova/ProximaNova-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/proxima-nova/ProximaNova-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/proxima-nova/ProximaNova-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/proxima-nova/ProximaNova-SemiboldIt.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/proxima-nova/ProximaNova-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/proxima-nova/ProximaNova-BoldIt.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/proxima-nova/ProximaNova-Extrabld.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/fonts/proxima-nova/ProximaNova-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* --- Design Tokens --- */
 :root {
   /* Void */
@@ -31,6 +103,7 @@
   --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-ui: 'Proxima Nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Spacing */
   --container-max: 1100px;
@@ -1494,8 +1567,8 @@ a:hover {
   align-items: center;
   height: 100%;
   padding: 0 16px;
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-ui);
+  font-size: 16px;
   font-weight: 600;
   color: var(--ovl-text-tertiary) !important;
   position: relative;
@@ -1553,8 +1626,8 @@ a:hover {
 }
 
 .ovl-nav-back {
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-ui);
+  font-size: 16px;
   color: var(--ovl-text-secondary) !important;
   letter-spacing: 0.02em;
 }
@@ -1623,9 +1696,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 500;
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 600;
   color: var(--ovl-text);
 }
 
@@ -1661,17 +1734,17 @@ a:hover {
 
 .ovl-sidebar-level--active > .ovl-sidebar-level-header {
   color: var(--ovl-accent);
-  font-weight: 600;
+  font-weight: 700;
   background: var(--ovl-accent-medium);
   border-left: 3px solid var(--ovl-accent);
   padding-left: 21px;
 }
 
 .ovl-sidebar-level-number {
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-ui);
+  font-size: 16px;
   color: var(--ovl-accent);
-  font-weight: 500;
+  font-weight: 700;
   flex-shrink: 0;
 }
 /* Per-level colors in sidebar */
@@ -1681,10 +1754,13 @@ a:hover {
 [data-level="03"] .ovl-sidebar-level-number { color: var(--level-03); }
 [data-level="04"] .ovl-sidebar-level-number { color: var(--level-04); }
 [data-level="05"] .ovl-sidebar-level-number { color: var(--level-05); }
-}
+[data-level="A1"] .ovl-sidebar-level-number { color: var(--level-00); }
+[data-level="A2"] .ovl-sidebar-level-number { color: var(--level-01); }
+[data-level="A3"] .ovl-sidebar-level-number { color: var(--level-02); }
+[data-level="A4"] .ovl-sidebar-level-number { color: var(--level-03); }
 
 .ovl-sidebar-level-title {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .ovl-sidebar-lessons {
@@ -1707,7 +1783,7 @@ a:hover {
 
 .ovl-sidebar-lesson--active {
   color: var(--ovl-accent);
-  font-weight: 600;
+  font-weight: 700;
   border-left-color: var(--ovl-accent);
   background: var(--ovl-accent-medium);
 }
@@ -1996,6 +2072,10 @@ a:hover {
 .ovl-level-card[data-level="03"] { --level-color: var(--level-03); }
 .ovl-level-card[data-level="04"] { --level-color: var(--level-04); }
 .ovl-level-card[data-level="05"] { --level-color: var(--level-05); }
+.ovl-level-card[data-level="A1"] { --level-color: var(--level-00); }
+.ovl-level-card[data-level="A2"] { --level-color: var(--level-01); }
+.ovl-level-card[data-level="A3"] { --level-color: var(--level-02); }
+.ovl-level-card[data-level="A4"] { --level-color: var(--level-03); }
 
 .ovl-level-card-number {
   font-family: var(--font-mono);
@@ -2059,7 +2139,10 @@ a:hover {
 [data-level="03"] .ovl-level-header-number { color: var(--level-03); }
 [data-level="04"] .ovl-level-header-number { color: var(--level-04); }
 [data-level="05"] .ovl-level-header-number { color: var(--level-05); }
-}
+[data-level="A1"] .ovl-level-header-number { color: var(--level-00); }
+[data-level="A2"] .ovl-level-header-number { color: var(--level-01); }
+[data-level="A3"] .ovl-level-header-number { color: var(--level-02); }
+[data-level="A4"] .ovl-level-header-number { color: var(--level-03); }
 
 .ovl-level-header-title {
   font-family: var(--font-display);
@@ -2435,8 +2518,8 @@ a:hover {
 }
 
 .ovl-nav-group-trigger {
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-ui);
+  font-size: 16px;
   font-weight: 500;
   color: var(--ovl-text-secondary);
   background: none;
@@ -2521,8 +2604,8 @@ a:hover {
 
 .ovl-nav-group-item {
   display: block;
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-ui);
+  font-size: 16px;
   font-weight: 500;
   color: var(--ovl-text-secondary) !important;
   text-decoration: none;
@@ -2575,16 +2658,16 @@ a:hover {
 }
 
 .ovl-user-dropdown-email {
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-family: var(--font-ui);
+  font-size: 16px;
   color: var(--ovl-text-secondary);
   margin-bottom: 12px;
   word-break: break-all;
 }
 
 .ovl-user-dropdown-signout {
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-family: var(--font-ui);
+  font-size: 16px;
   font-weight: 500;
   color: var(--ovl-text-secondary);
   background: none;
@@ -2825,7 +2908,6 @@ a:hover {
   0% { opacity: 0; transform: scale(0.5); }
   60% { transform: scale(1.2); }
   100% { opacity: 1; transform: scale(1); }
-}
 }
 
 .ovl-sidebar-lesson-label {
@@ -5079,8 +5161,8 @@ a:hover {
   align-items: center;
   gap: 8px;
   padding: 6px 0;
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-ui);
+  font-size: 16px;
   color: var(--ovl-text-secondary);
 }
 

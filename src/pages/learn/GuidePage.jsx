@@ -7,19 +7,17 @@ import useSEO from '../../hooks/useSEO';
 // Categories now come from the virtual module via learn.approach.categories
 
 function GuidePage() {
-  const { guideSlug } = useParams();
+  const { categorySlug, guideSlug } = useParams();
   const { learn } = useOutletContext();
   const { approach } = learn;
 
   const guide = approach.guides.find(g => g.slug === guideSlug);
-  const category = guide
-    ? (approach.categories || []).find(c => c.key === guide.category)
-    : null;
+  const category = (approach.categories || []).find(c => c.key === (categorySlug || guide?.category));
 
   useSEO({
     title: guide ? `${guide.title} — Open Vector` : 'Guide Not Found',
     description: guide?.subtitle,
-    path: `/learn/approach/${guideSlug}`,
+    path: `/learn/approach/${categorySlug}/${guideSlug}`,
   });
 
   if (!guide) {
@@ -55,7 +53,11 @@ function GuidePage() {
       <article className="ovl-main ovl-lesson">
         <header className="ovl-lesson-header">
           <div className="ovl-lesson-meta">
-            {category && <span className="ovl-guide-category">{category.label}</span>}
+            {category && (
+              <Link to={`/learn/approach/${category.key}`} className="ovl-guide-category">
+                {category.number} {category.label}
+              </Link>
+            )}
             {guide.duration && <span className="ovl-lesson-duration">{guide.duration}</span>}
             <LessonBadge badge={guide.badge} />
           </div>
