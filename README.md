@@ -19,7 +19,7 @@ The Open Vector is the curriculum arm of [Zero Vector](https://zerovector.design
 | 04 | Orchestration | Multi-agent workflows, CLAUDE.md, staged prompts, crew model |
 | 05 | Auteur | Personal methodology, framework design, teaching, contribution |
 
-Plus 10 **Approach guides** — step-by-step walkthroughs for common tasks like scaffolding a project, writing a PRD, or debugging with AI.
+Plus 11 **Approach guides** — step-by-step walkthroughs for common tasks like scaffolding a project, writing a PRD, or debugging with AI.
 
 ## Running Locally
 
