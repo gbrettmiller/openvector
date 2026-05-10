@@ -24,7 +24,7 @@ export default {
   subtitle: 'A one-line description of what this lesson covers.',
   duration: '15 min',           // Estimated reading/doing time
   status: 'coming',             // 'coming' | 'available'
-  badge: null,                   // 'new' | 'updated' | null — manual flag for UI badges
+  badge: null,                   // 'new' | 'updated' | null — see "Lesson Badges" in CLAUDE.md for when to apply each value
   updatedAt: null,               // ISO date string (e.g. '2026-02-14') — for sorting in "Recently Added"
   content: {
     sections: [

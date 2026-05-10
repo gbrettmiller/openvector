@@ -136,6 +136,16 @@ Confirm the required tool is installed before continuing. Instructions for each 
 :::
 ```
 
+### Lesson Badges
+
+Set the `badge` frontmatter field on curriculum lessons and approach guides according to these rules:
+
+- **`'new'`** — apply when a lesson or guide is first published. Remove (set to `null`) after approximately 30 days, using the file's creation date or the date it was added to `manifest.yaml` as the anchor.
+- **`'updated'`** — apply after a *substantive* rewrite ships, meaning content changes that would alter a learner's takeaway. Remove after approximately 30 days. Formatting fixes, typo corrections, link updates, and audit-driven cleanup (e.g., the issue #14 sweep) do not qualify as substantive rewrites.
+- **`null` (or omit the key)** — the default for all content that is neither freshly published nor recently rewritten.
+
+`badge` is rendered as a UI chip by `src/components/learn/LessonBadge.jsx`. Valid values are `'new'`, `'updated'`, and `null`; any other value is silently ignored by the component.
+
 ## Environment Variables
 
 - `ANTHROPIC_API_KEY` — for the AI chat Netlify Function
